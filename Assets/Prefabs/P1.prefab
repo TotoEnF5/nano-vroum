@@ -151,7 +151,7 @@ MonoBehaviour:
     m_ActionId: 0f56349f-de9f-493a-aff1-c660a995247f
     m_ActionName: Controls/Teleport
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

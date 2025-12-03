@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -9,10 +10,11 @@ public class Cursors : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 10f;
     private Vector2 moveInput;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
+    private void Start()
+    {
+        PlayerManager pm = FindFirstObjectByType<PlayerManager>();
+        pm.players.Add(gameObject);
     }
 
     // Update is called once per frame
