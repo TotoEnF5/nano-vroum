@@ -1,60 +1,43 @@
+using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class MoveCamera : MonoBehaviour
 {
-    private Camera _camera;
-    
-    private Vector3 _initialPosition;
-    private Vector3 _goalPosition;
-    private float _lerpTime = 0.0f;
-    private float _t = 0.0f;
-    private bool _doLerp = false;
+    private float _camWidth, _camHeight;
 
     private void Awake()
     {
-        _camera = GetComponent<Camera>();
+        Camera camera = GetComponent<Camera>();
+        _camHeight = 2 * camera.orthographicSize;
+        _camWidth = _camHeight * camera.aspect;
+        Debug.Log(_camWidth);
+        Debug.Log(_camHeight);
     }
 
-    private void Update()
+    public void StartMovement(Transform goal, float time, Trigger.SideDestination sideDestination)
     {
-        if (!_doLerp)
-        {
-            return;
-        }
+        Vector3 destination = goal.position;
         
-        float z = transform.position.z;
-            
-        _t += Time.deltaTime / _lerpTime;
-        Vector3 newPos = Vector3.Lerp(_initialPosition, _goalPosition, _t);
-        newPos.z = transform.position.z;
-        transform.position = newPos;
-
-        _doLerp = _t < 1.0f;
-    }
-
-    public void StartMovement(Vector3 goal, float time, Trigger.SideDestination sideDestination, Vector3 triggerScale)
-    {
         switch (sideDestination)
         {
             case Trigger.SideDestination.Top:
-                goal.y -= _camera.orthographicSize + triggerScale.y;
+                destination.y -= _camHeight / 2 + goal.localScale.y / 2;
                 break;
             case Trigger.SideDestination.Bottom:
-                goal.y += _camera.orthographicSize + triggerScale.y;
+                destination.y += _camHeight / 2 + goal.localScale.y / 2;
                 break;
             case Trigger.SideDestination.Left:
-                goal.x -= _camera.orthographicSize + triggerScale.x;
+                destination.x -= _camWidth / 2 + goal.localScale.x / 2;
                 break;
             case Trigger.SideDestination.Right:
-                goal.x += _camera.orthographicSize + triggerScale.x;
+                destination.x += _camWidth / 2 + goal.localScale.x / 2;
                 break;
             default:
                 break;
         }
-        
-        _initialPosition = transform.position;
-        _goalPosition = goal;
-        _lerpTime = time;
-        _doLerp = true;
+
+        destination.z = transform.position.z;
+        transform.DOMove(destination, time);
     }
 }

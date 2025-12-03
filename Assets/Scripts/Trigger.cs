@@ -13,7 +13,7 @@ public class Trigger : MonoBehaviour
     
     [SerializeField] private MoveCamera cameraScript;
     [SerializeField] private bool showInGame = false;
-    [SerializeField] private float time = 0.5f;
+    [SerializeField] private float time = 2;
     [SerializeField] private SideDestination sideDestination;
 
     private void Awake()
@@ -25,7 +25,7 @@ public class Trigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            cameraScript.StartMovement(transform.position, time, sideDestination, transform.localScale);
+            cameraScript.StartMovement(transform, time, sideDestination);
         }
     }
 }
