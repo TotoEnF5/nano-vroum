@@ -12,6 +12,7 @@ public class MoveCamera : MonoBehaviour
         Bottom, // The camera goes at the bottom of the trigger
         Left,   // The camera goes at the left of the trigger
         Right,  // The camera goes at the right of the trigger
+        Custom, // The camera goes to a user-defined location
     }
 
     private Camera _camera;
@@ -46,10 +47,16 @@ public class MoveCamera : MonoBehaviour
             default:
                 break;
         }
-        destination.z = transform.position.z;
+        
+        StartMovement(destination, newSize, time);
+    }
+
+    public void StartMovement(Vector3 goal, float newSize, float time)
+    {
+        goal.z = transform.position.z;
         
         // Allez hop tweenez moi ça
-        transform.DOMove(destination, time);
+        transform.DOMove(goal, time);
         DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 }

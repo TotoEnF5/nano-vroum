@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
@@ -7,6 +8,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] private bool showInGame = false;
     [SerializeField] private float time = 2;
     [SerializeField] private MoveCamera.CameraDestination cameraDestination;
+    [SerializeField] private Vector3 customPosition;
     [SerializeField, Min(0)] private float newCameraSize = 5;
 
     private void Awake()
@@ -18,7 +20,14 @@ public class Trigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            cameraScript.StartMovement(transform, time, cameraDestination, newCameraSize);
+            if (cameraDestination == MoveCamera.CameraDestination.Custom)
+            {
+                cameraScript.StartMovement(customPosition, newCameraSize, time);
+            }
+            else
+            {
+                cameraScript.StartMovement(transform, time, cameraDestination, newCameraSize);
+            }
         }
     }
 }
