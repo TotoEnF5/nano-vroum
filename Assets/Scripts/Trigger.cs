@@ -41,4 +41,9 @@ public class Trigger : MonoBehaviour
     {
         cameraScript = script;
     }
+
+    public void SetTime(float t)
+    {
+        time = t;
+    }
 }
