@@ -557,6 +557,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: matchX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: matchY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: showInGame
       value: 1
       objectReference: {fileID: 0}
@@ -570,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: cameraDestination
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8628888074522114097, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: m_Name

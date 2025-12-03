@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    
     [SerializeField] private MoveCamera cameraScript;
     [SerializeField] private bool showInGame = false;
     [SerializeField] private float time = 2;
+    [SerializeField] private bool matchX = true;
+    [SerializeField] private bool matchY = true;
     [SerializeField] private MoveCamera.CameraDestination cameraDestination;
     [SerializeField] private Vector3 customPosition;
     [SerializeField, Min(0)] private float newCameraSize = 5;
@@ -26,7 +27,7 @@ public class Trigger : MonoBehaviour
             }
             else
             {
-                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time);
+                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time, matchX, matchY);
             }
         }
     }
