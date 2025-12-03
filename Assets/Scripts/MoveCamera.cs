@@ -8,10 +8,12 @@ public class MoveCamera : MonoBehaviour
      */
     public enum CameraDestination
     {
-        Top,    // The camera goes at the top of the trigger
-        Bottom, // The camera goes at the bottom of the trigger
-        Left,   // The camera goes at the left of the trigger
-        Right,  // The camera goes at the right of the trigger
+        Top,            // The camera goes at the top of the trigger
+        Bottom,         // The camera goes at the bottom of the trigger
+        Left,           // The camera goes at the left of the trigger
+        Right,          // The camera goes at the right of the trigger
+        CameraTrigger,  // The camera scrolls to another camera trigger
+        Custom,         // The camera goes to a user-defined location
     }
 
     private Camera _camera;
@@ -21,7 +23,7 @@ public class MoveCamera : MonoBehaviour
         _camera = GetComponent<Camera>();
     }
 
-    public void StartMovement(Transform goal, float time, CameraDestination cameraDestination, float newSize = 0)
+    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
     {
         // New camera size
         float camHeight = 2 * newSize;
@@ -46,10 +48,31 @@ public class MoveCamera : MonoBehaviour
             default:
                 break;
         }
-        destination.z = transform.position.z;
+
+        if (!matchX)
+        {
+            destination.x = transform.position.x;
+        }
+        
+        if (!matchY)
+        {
+            destination.y = transform.position.y;
+        }
+        
+        StartMovement(destination, newSize, time);
+    }
+
+    public void StartMovement(Transform goal, float newSize, float time)
+    {
+        StartMovement(goal.position, newSize, time);
+    }
+
+    public void StartMovement(Vector3 goal, float newSize, float time)
+    {
+        goal.z = transform.position.z;
         
         // Allez hop tweenez moi ça
-        transform.DOMove(destination, time);
+        transform.DOMove(goal, time);
         DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 }

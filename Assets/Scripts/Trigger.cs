@@ -1,24 +1,50 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    
-    [SerializeField] private MoveCamera cameraScript;
-    [SerializeField] private bool showInGame = false;
-    [SerializeField] private float time = 2;
-    [SerializeField] private MoveCamera.CameraDestination cameraDestination;
-    [SerializeField, Min(0)] private float newCameraSize = 5;
+    public MoveCamera cameraScript;
+    public bool doSomething = true;
+    public bool showInGame = false;
+    public float time = 2;
+    public bool matchX = true;
+    public bool matchY = true;
+    public MoveCamera.CameraDestination cameraDestination;
+    public Transform scrollingDestination;
+    public Vector3 customPosition;
+    [Min(0)] public float newCameraSize = 5;
 
     private void Awake()
     {
-        GetComponent<Renderer>().enabled = showInGame;
+        Show(showInGame);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!doSomething)
+        {
+            return;
+        }
+        
         if (other.gameObject.CompareTag("Player"))
         {
-            cameraScript.StartMovement(transform, time, cameraDestination, newCameraSize);
+            if (cameraDestination == MoveCamera.CameraDestination.Custom)
+            {
+                cameraScript.StartMovement(customPosition, newCameraSize, time);
+            }
+            else if (cameraDestination == MoveCamera.CameraDestination.CameraTrigger)
+            {
+                cameraScript.StartMovement(scrollingDestination, newCameraSize, time);
+            }
+            else
+            {
+                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time, matchX, matchY);
+            }
         }
+    }
+
+    public void Show(bool show)
+    {
+        GetComponent<Renderer>().enabled = show;
     }
 }
