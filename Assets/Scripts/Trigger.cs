@@ -9,6 +9,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] private bool matchX = true;
     [SerializeField] private bool matchY = true;
     [SerializeField] private MoveCamera.CameraDestination cameraDestination;
+    [SerializeField] private Transform scrollingDestination;
     [SerializeField] private Vector3 customPosition;
     [SerializeField, Min(0)] private float newCameraSize = 5;
 
@@ -25,10 +26,19 @@ public class Trigger : MonoBehaviour
             {
                 cameraScript.StartMovement(customPosition, newCameraSize, time);
             }
+            else if (cameraDestination == MoveCamera.CameraDestination.CameraTrigger)
+            {
+                cameraScript.StartMovement(scrollingDestination, newCameraSize, time);
+            }
             else
             {
                 cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time, matchX, matchY);
             }
         }
+    }
+
+    public void SetCameraScript(MoveCamera script)
+    {
+        cameraScript = script;
     }
 }

@@ -8,11 +8,12 @@ public class MoveCamera : MonoBehaviour
      */
     public enum CameraDestination
     {
-        Top,    // The camera goes at the top of the trigger
-        Bottom, // The camera goes at the bottom of the trigger
-        Left,   // The camera goes at the left of the trigger
-        Right,  // The camera goes at the right of the trigger
-        Custom, // The camera goes to a user-defined location
+        Top,            // The camera goes at the top of the trigger
+        Bottom,         // The camera goes at the bottom of the trigger
+        Left,           // The camera goes at the left of the trigger
+        Right,          // The camera goes at the right of the trigger
+        CameraTrigger,  // The camera scrolls to another camera trigger
+        Custom,         // The camera goes to a user-defined location
     }
 
     private Camera _camera;
@@ -59,6 +60,11 @@ public class MoveCamera : MonoBehaviour
         }
         
         StartMovement(destination, newSize, time);
+    }
+
+    public void StartMovement(Transform goal, float newSize, float time)
+    {
+        StartMovement(goal.position, newSize, time);
     }
 
     public void StartMovement(Vector3 goal, float newSize, float time)
