@@ -22,7 +22,7 @@ public class MoveCamera : MonoBehaviour
         _camera = GetComponent<Camera>();
     }
 
-    public void StartMovement(Transform goal, float time, CameraDestination cameraDestination, float newSize = 0)
+    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time)
     {
         // New camera size
         float camHeight = 2 * newSize;

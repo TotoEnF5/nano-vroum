@@ -26,7 +26,7 @@ public class Trigger : MonoBehaviour
             }
             else
             {
-                cameraScript.StartMovement(transform, time, cameraDestination, newCameraSize);
+                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time);
             }
         }
     }
