@@ -13,41 +13,43 @@ public class MoveCamera : MonoBehaviour
         Left,   // The camera goes at the left of the trigger
         Right,  // The camera goes at the right of the trigger
     }
-    
-    private float _camWidth, _camHeight;
+
+    private Camera _camera;
 
     private void Awake()
     {
-        Camera camera = GetComponent<Camera>();
-        _camHeight = 2 * camera.orthographicSize;
-        _camWidth = _camHeight * camera.aspect;
-        Debug.Log(_camWidth);
-        Debug.Log(_camHeight);
+        _camera = GetComponent<Camera>();
     }
 
-    public void StartMovement(Transform goal, float time, CameraDestination cameraDestination)
+    public void StartMovement(Transform goal, float time, CameraDestination cameraDestination, float newSize = 0)
     {
-        Vector3 destination = goal.position;
+        // New camera size
+        float camHeight = 2 * newSize;
+        float camWidth = camHeight * _camera.aspect;
         
+        // New camera coords
+        Vector3 destination = goal.position;
         switch (cameraDestination)
         {
             case CameraDestination.Top:
-                destination.y += _camHeight / 2 + goal.localScale.y / 2;
+                destination.y += camHeight / 2 + goal.localScale.y / 2;
                 break;
             case CameraDestination.Bottom:
-                destination.y -= _camHeight / 2 + goal.localScale.y / 2;
+                destination.y -= camHeight / 2 + goal.localScale.y / 2;
                 break;
             case CameraDestination.Left:
-                destination.x -= _camWidth / 2 + goal.localScale.x / 2;
+                destination.x -= camWidth / 2 + goal.localScale.x / 2;
                 break;
             case CameraDestination.Right:
-                destination.x += _camWidth / 2 + goal.localScale.x / 2;
+                destination.x += camWidth / 2 + goal.localScale.x / 2;
                 break;
             default:
                 break;
         }
-
         destination.z = transform.position.z;
+        
+        // Allez hop tweenez moi ça
         transform.DOMove(destination, time);
+        DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 }
