@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    [SerializeField] private MoveCamera cameraScript;
-    [SerializeField] private bool showInGame = false;
-    [SerializeField] private float time = 2;
-    [SerializeField] private bool matchX = true;
-    [SerializeField] private bool matchY = true;
-    [SerializeField] private MoveCamera.CameraDestination cameraDestination;
-    [SerializeField] private Transform scrollingDestination;
-    [SerializeField] private Vector3 customPosition;
-    [SerializeField, Min(0)] private float newCameraSize = 5;
+    public MoveCamera cameraScript;
+    public bool showInGame = false;
+    public float time = 2;
+    public bool matchX = true;
+    public bool matchY = true;
+    public MoveCamera.CameraDestination cameraDestination;
+    public Transform scrollingDestination;
+    public Vector3 customPosition;
+    [Min(0)] public float newCameraSize = 5;
 
     private void Awake()
     {
-        GetComponent<Renderer>().enabled = showInGame;
+        Show(showInGame);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,13 +37,8 @@ public class Trigger : MonoBehaviour
         }
     }
 
-    public void SetCameraScript(MoveCamera script)
+    public void Show(bool show)
     {
-        cameraScript = script;
-    }
-
-    public void SetTime(float t)
-    {
-        time = t;
+        GetComponent<Renderer>().enabled = show;
     }
 }

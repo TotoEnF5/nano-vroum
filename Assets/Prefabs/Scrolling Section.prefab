@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   cameraScript: {fileID: 0}
+  showInGame: 0
   time: 3
+  newCameraSize: 5
 --- !u!1001 &3381280325001384746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,7 +104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: showInGame
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: cameraDestination
@@ -192,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: showInGame
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: cameraDestination
