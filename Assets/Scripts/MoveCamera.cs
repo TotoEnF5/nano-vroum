@@ -3,6 +3,17 @@ using DG.Tweening;
 
 public class MoveCamera : MonoBehaviour
 {
+    /**
+     * Where the camera should end up relative to the trigger.
+     */
+    public enum CameraDestination
+    {
+        Top,    // The camera goes at the top of the trigger
+        Bottom, // The camera goes at the bottom of the trigger
+        Left,   // The camera goes at the left of the trigger
+        Right,  // The camera goes at the right of the trigger
+    }
+    
     private float _camWidth, _camHeight;
 
     private void Awake()
@@ -14,22 +25,22 @@ public class MoveCamera : MonoBehaviour
         Debug.Log(_camHeight);
     }
 
-    public void StartMovement(Transform goal, float time, Trigger.CameraDestination cameraDestination)
+    public void StartMovement(Transform goal, float time, CameraDestination cameraDestination)
     {
         Vector3 destination = goal.position;
         
         switch (cameraDestination)
         {
-            case Trigger.CameraDestination.Top:
+            case CameraDestination.Top:
                 destination.y += _camHeight / 2 + goal.localScale.y / 2;
                 break;
-            case Trigger.CameraDestination.Bottom:
+            case CameraDestination.Bottom:
                 destination.y -= _camHeight / 2 + goal.localScale.y / 2;
                 break;
-            case Trigger.CameraDestination.Left:
+            case CameraDestination.Left:
                 destination.x -= _camWidth / 2 + goal.localScale.x / 2;
                 break;
-            case Trigger.CameraDestination.Right:
+            case CameraDestination.Right:
                 destination.x += _camWidth / 2 + goal.localScale.x / 2;
                 break;
             default:
