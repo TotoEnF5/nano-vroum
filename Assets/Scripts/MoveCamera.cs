@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using DG.Tweening;
 
@@ -15,22 +14,22 @@ public class MoveCamera : MonoBehaviour
         Debug.Log(_camHeight);
     }
 
-    public void StartMovement(Transform goal, float time, Trigger.SideDestination sideDestination)
+    public void StartMovement(Transform goal, float time, Trigger.CameraDestination cameraDestination)
     {
         Vector3 destination = goal.position;
         
-        switch (sideDestination)
+        switch (cameraDestination)
         {
-            case Trigger.SideDestination.Top:
-                destination.y -= _camHeight / 2 + goal.localScale.y / 2;
-                break;
-            case Trigger.SideDestination.Bottom:
+            case Trigger.CameraDestination.Top:
                 destination.y += _camHeight / 2 + goal.localScale.y / 2;
                 break;
-            case Trigger.SideDestination.Left:
+            case Trigger.CameraDestination.Bottom:
+                destination.y -= _camHeight / 2 + goal.localScale.y / 2;
+                break;
+            case Trigger.CameraDestination.Left:
                 destination.x -= _camWidth / 2 + goal.localScale.x / 2;
                 break;
-            case Trigger.SideDestination.Right:
+            case Trigger.CameraDestination.Right:
                 destination.x += _camWidth / 2 + goal.localScale.x / 2;
                 break;
             default:
