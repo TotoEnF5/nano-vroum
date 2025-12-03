@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571d77d5130ba896c80cdd14bbee324d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cameraScript: {fileID: 0}
 --- !u!1001 &3381280325001384746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +115,18 @@ PrefabInstance:
       propertyPath: scrollingDestination
       value: 
       objectReference: {fileID: 4650275475044715386}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.b
+      value: 0.14890099
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8628888074522114097, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: m_Name
       value: Source
@@ -187,6 +200,18 @@ PrefabInstance:
     - target: {fileID: 4517185342340526341, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: scrollDestination
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.b
+      value: 0.052033424
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945319581271468113, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8628888074522114097, guid: e499eb10f1f8ee8d4b053bac3957d007, type: 3}
       propertyPath: m_Name
