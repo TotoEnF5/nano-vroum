@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
@@ -33,10 +32,28 @@ public class MoveCamera : MonoBehaviour
         _doLerp = _t < 1.0f;
     }
 
-    public void StartMovement(Vector3 goal, float time)
+    public void StartMovement(Vector3 goal, float time, Trigger.SideDestination sideDestination, Vector3 triggerScale)
     {
+        switch (sideDestination)
+        {
+            case Trigger.SideDestination.Top:
+                goal.y -= _camera.orthographicSize + triggerScale.y;
+                break;
+            case Trigger.SideDestination.Bottom:
+                goal.y += _camera.orthographicSize + triggerScale.y;
+                break;
+            case Trigger.SideDestination.Left:
+                goal.x -= _camera.orthographicSize + triggerScale.x;
+                break;
+            case Trigger.SideDestination.Right:
+                goal.x += _camera.orthographicSize + triggerScale.x;
+                break;
+            default:
+                break;
+        }
+        
         _initialPosition = transform.position;
-        _goalPosition = new Vector3(goal.x, goal.y - _camera.orthographicSize, goal.z);
+        _goalPosition = goal;
         _lerpTime = time;
         _doLerp = true;
     }
