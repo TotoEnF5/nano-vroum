@@ -570,11 +570,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4650275475044715386, guid: 978792d2f191f22f3b235e5cd2ec6e36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.73
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 4650275475044715386, guid: 978792d2f191f22f3b235e5cd2ec6e36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.31
+      value: -6.23
       objectReference: {fileID: 0}
     - target: {fileID: 7132480302532008917, guid: 978792d2f191f22f3b235e5cd2ec6e36, type: 3}
       propertyPath: cameraScript

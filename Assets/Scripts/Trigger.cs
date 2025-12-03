@@ -4,6 +4,7 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     public MoveCamera cameraScript;
+    public bool doSomething = true;
     public bool showInGame = false;
     public float time = 2;
     public bool matchX = true;
@@ -20,6 +21,11 @@ public class Trigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!doSomething)
+        {
+            return;
+        }
+        
         if (other.gameObject.CompareTag("Player"))
         {
             if (cameraDestination == MoveCamera.CameraDestination.Custom)
