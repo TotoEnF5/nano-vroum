@@ -14,7 +14,7 @@ public class Cursors : MonoBehaviour
     [SerializeField] private float pushForce = 10f;
     private Vector2 moveInput;
     private GameObject target;
-    private Rigidbody targetRB;
+    private Rigidbody2D targetRB;
     private bool canAct = false;
     PlayerManager pm;
     ParticleSystem ps;
@@ -29,8 +29,8 @@ public class Cursors : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         ps.enableEmission = false;
         mainCamera = Camera.main;
-        target = GameObject.FindGameObjectWithTag("target");
-        targetRB = target.GetComponent<Rigidbody>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
     }
 
@@ -55,7 +55,7 @@ public class Cursors : MonoBehaviour
             Vector3 startPos = targetRB.position;
             Vector3 endPos = transform.position;
             Vector3 pushDirection = (endPos - startPos).normalized;
-            targetRB.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+            targetRB.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
             pm.EndTurn();
 
         }
