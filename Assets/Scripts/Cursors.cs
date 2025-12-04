@@ -1,4 +1,6 @@
+using DG.Tweening;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -15,10 +17,15 @@ public class Cursors : MonoBehaviour
     private Rigidbody targetRB;
     private bool canAct = false;
     PlayerManager pm;
+    ParticleSystem ps;
+    SpriteRenderer sr;
 
     private void Start()
     {
         pm = FindFirstObjectByType<PlayerManager>();
+        ps = GetComponent<ParticleSystem>();
+        sr = GetComponent<SpriteRenderer>();
+        ps.enableEmission = false;
         target = GameObject.FindGameObjectWithTag("target");
         targetRB = target.GetComponent<Rigidbody>();
         pm.players.Add(gameObject);
@@ -27,6 +34,7 @@ public class Cursors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ps.startColor = sr.color;
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
     }
@@ -51,5 +59,13 @@ public class Cursors : MonoBehaviour
     public void SetCanAct(bool status)
     {
         canAct = status;
+        if(canAct)
+        {
+            ps.enableEmission = true;
+        }
+        else
+        {
+            ps.enableEmission = false;
+        }
     }
 }
