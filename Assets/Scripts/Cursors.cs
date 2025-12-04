@@ -20,12 +20,15 @@ public class Cursors : MonoBehaviour
     ParticleSystem ps;
     SpriteRenderer sr;
 
+    private Camera mainCamera;
+
     private void Start()
     {
         pm = FindFirstObjectByType<PlayerManager>();
         ps = GetComponent<ParticleSystem>();
         sr = GetComponent<SpriteRenderer>();
         ps.enableEmission = false;
+        mainCamera = Camera.main;
         target = GameObject.FindGameObjectWithTag("target");
         targetRB = target.GetComponent<Rigidbody>();
         pm.players.Add(gameObject);
@@ -37,6 +40,7 @@ public class Cursors : MonoBehaviour
         ps.startColor = sr.color;
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+        ClampPositionToScreen();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -67,5 +71,30 @@ public class Cursors : MonoBehaviour
         {
             ps.enableEmission = false;
         }
+    }
+
+    private void ClampPositionToScreen()
+    {
+
+
+        // Convertit les coins de l'écran (0,0 et 1,1 en viewport coordinates) en World Position
+        Vector3 minScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - mainCamera.transform.position.z));
+        Vector3 maxScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - mainCamera.transform.position.z));
+
+        Vector3 currentPosition = transform.position;
+
+        currentPosition.x = Mathf.Clamp(
+            currentPosition.x,
+            minScreenBounds.x,
+            maxScreenBounds.x
+        );
+
+        currentPosition.y = Mathf.Clamp(
+            currentPosition.y,
+            minScreenBounds.y,
+            maxScreenBounds.y
+        );
+
+        transform.position = currentPosition;
     }
 }
