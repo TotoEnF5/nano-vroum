@@ -37,5 +37,7 @@ public class Character : MonoBehaviour
         Vector3 randomVec3 = new Vector3(random.x, random.y, 0);
         randomVec3 += transform.position;
         friend.transform.position = randomVec3;
+        
+        // TODO: When getting a new friend, increase the moving speed
     }
 }
