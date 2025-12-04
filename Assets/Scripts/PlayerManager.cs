@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [HideInInspector]
     public List<GameObject> players;
     public Color[] colors;
     private bool isInitDone = false;
