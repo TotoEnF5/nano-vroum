@@ -13,7 +13,11 @@ public class Friend : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 force = transform.parent.position - transform.position;
-        force *= 3;
+        force *= 5;
         _rigidBody.AddForce(force);
+
+        // Clamp velocity
+        _rigidBody.linearVelocity =
+            Vector2.ClampMagnitude(_rigidBody.linearVelocity, 6);
     }
 }
