@@ -63,5 +63,9 @@ public class Cursors : MonoBehaviour
         {
             ps.enableEmission = true;
         }
+        else
+        {
+            ps.enableEmission = false;
+        }
     }
 }
