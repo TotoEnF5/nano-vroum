@@ -5,15 +5,17 @@ public class SimpleRotate : MonoBehaviour
     public AnimationCurve CurveRotate;
     public float speed = 1;
     //lerps from 0-1 with the curveRotate 
+    private Vector3 startingRotation;
+    [Range(-360,360)]
+    public float AngleIncrement = 360f;
+
+
     [SerializeField]
     private float m_rotationTime = 0;
-    private Vector3 startingRotation;
-    [Range(0,360)]
-    public float AngleIncrement = 360f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        startingRotation = transform.eulerAngles;
     }
 
     // Update is called once per frame
