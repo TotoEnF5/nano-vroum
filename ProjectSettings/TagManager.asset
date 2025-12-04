@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerManager
   - target
+  - LostFriend
   layers:
   - Default
   - TransparentFX
