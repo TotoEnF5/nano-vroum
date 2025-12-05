@@ -11,6 +11,7 @@ TagManager:
   - Border1
   - Border2
   - Baudroie
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
