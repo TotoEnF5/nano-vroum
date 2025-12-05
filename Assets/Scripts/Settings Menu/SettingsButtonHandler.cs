@@ -25,12 +25,12 @@ public class SettingsButtonHandler : MonoBehaviour
 
     private void OnFullscreenToggle(bool toggled)
     {
-        throw new NotImplementedException();
+        Screen.fullScreen = toggled;
     }
 
     private void OnBrightnessChange(float value)
     {
-        throw new NotImplementedException();
+        Screen.brightness = value;
     }
     
     private void OnMasterVolumeChange(float value)
