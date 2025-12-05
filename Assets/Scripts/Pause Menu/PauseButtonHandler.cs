@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonHandler : MonoBehaviour
+public class PauseButtonHandler : MonoBehaviour
 {
     public Button backToGame;
     public Button settings;
