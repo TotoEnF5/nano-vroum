@@ -20,7 +20,7 @@ public class PauseButtonHandler : MonoBehaviour
     
     private void OnBackToGame()
     {
-        throw new NotImplementedException();
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MenuPause"));
     }
     
     private void OnSettings()
