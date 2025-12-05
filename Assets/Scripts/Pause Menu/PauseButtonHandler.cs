@@ -30,7 +30,7 @@ public class PauseButtonHandler : MonoBehaviour
     
     private void OnBackToMainMenu()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene("MenuMain");
     }
     
     private void OnQuitGame()

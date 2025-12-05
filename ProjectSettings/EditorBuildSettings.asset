@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuSettings.unity
     guid: e2f65ef29a422c89fa0e3c151735cb8c
+  - enabled: 1
+    path: Assets/Scenes/MapGrayblock.unity
+    guid: 02bfe998e62a2e04ab44307f95bf8f07
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

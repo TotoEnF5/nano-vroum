@@ -20,7 +20,7 @@ public class MainButtonHandler : MonoBehaviour
 
     private void OnPlay()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene("MapGrayblock");
     }
     
     private void OnSettings()
