@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsButtonHandler : MonoBehaviour
@@ -55,6 +56,6 @@ public class SettingsButtonHandler : MonoBehaviour
 
     private void OnBack()
     {
-        throw new NotImplementedException();
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("MenuSettings"));
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseButtonHandler : MonoBehaviour
@@ -24,7 +25,7 @@ public class PauseButtonHandler : MonoBehaviour
     
     private void OnSettings()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene("MenuSettings", LoadSceneMode.Additive);
     }
     
     private void OnBackToMainMenu()

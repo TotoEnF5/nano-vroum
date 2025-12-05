@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   backToGame: {fileID: 1881611312}
-  settings: {fileID: 0}
-  backToMainMenu: {fileID: 0}
-  quitGame: {fileID: 0}
+  settings: {fileID: 1929840472}
+  backToMainMenu: {fileID: 455424105}
+  quitGame: {fileID: 621828846}
 --- !u!4 &106410104
 Transform:
   m_ObjectHideFlags: 0
