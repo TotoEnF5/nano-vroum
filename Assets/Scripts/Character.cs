@@ -12,12 +12,14 @@ public class Character : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody2D>();
     }
     
+    /*
     private void Update()
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos.z = 0;
         _rigidBody.MovePosition(pos);
     }
+    */
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,6 +27,11 @@ public class Character : MonoBehaviour
         {
             AddFriend();
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Baudroie"))
+        {
+            GamestateManager.SetGamestate(Gamestate.GameOver);
         }
     }
 
