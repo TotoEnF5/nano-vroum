@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 public enum Gamestate
@@ -10,6 +11,9 @@ public enum Gamestate
 
 public class GamestateManager : MonoBehaviour
 {
+    public static Transform Character;
+    public static Transform CurrentCheckpoint;
+    
     private static Gamestate _gamestate = Gamestate.Playing;
 
     public static void SetGamestate(Gamestate state)
@@ -23,7 +27,8 @@ public class GamestateManager : MonoBehaviour
                 throw new NotImplementedException();
             
            case Gamestate.GameOver:
-               Debug.Log("oh no");
+               // TODO: Better game over handling
+               Character.transform.DOMove(CurrentCheckpoint.position, 1f);
                break;
            
            default:
