@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6108021922734290289}
   - component: {fileID: 4988767740833193041}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Sprite Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6108021922734290289
 Transform:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 4433116695248821095}
   - component: {fileID: 369799303644227577}
   - component: {fileID: 5065267749940895532}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4750761433519615375, guid: 25f69124aee844c489ed51cab4147144, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -193,7 +193,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursors
   moveSpeed: 10
-  pushForce: 5
+  targetTravelTime: 0.4
+  pushForce: 15
+  destinationTolerance: 2
+  velocityReductionFactor: 0.03
+  minSpeedForRotation: 0.3
+  rotationSpeed: 10
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +244,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7327238672404666819}
         m_TargetAssemblyTypeName: Cursors, Assembly-CSharp
-        m_MethodName: TeleportObjectByTag
+        m_MethodName: PushTargetToCursor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5075,7 +5080,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
