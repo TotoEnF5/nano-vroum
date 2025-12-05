@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac8cf38f7b6296b2821f604285c3049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaudroieDestinationTrigger
-  ease: 25
+  ease: 1
   time: 1
   showInGame: 0
 --- !u!1 &4528855632738749108
