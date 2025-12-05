@@ -192,9 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4309921f4ee5449bcb371b31d4c550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursors
-  moveSpeed: 10
-  targetTravelTime: 0.4
-  pushForce: 15
+  moveSpeed: 50
+  targetTravelTime: 0.5
+  pushForce: 10
   destinationTolerance: 2
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3

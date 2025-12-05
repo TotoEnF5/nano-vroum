@@ -8,6 +8,8 @@ TagManager:
   - target
   - LostFriend
   - Destroy Trigger
+  - Border1
+  - Border2
   layers:
   - Default
   - TransparentFX
