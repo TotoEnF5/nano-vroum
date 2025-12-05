@@ -10,7 +10,7 @@ public class Baudroie : MonoBehaviour
     
     private void Awake()
     {
-        transform.Find("Death Zone").GetComponent<DeathZone>().baudroie = this;
+        transform.GetComponentInChildren<DeathZone>().baudroie = this;
     }
     
     public void DoAnimation()
