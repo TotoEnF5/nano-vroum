@@ -9,22 +9,27 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        GamestateManager.Character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
     }
     
-    private void Update()
-    {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pos.z = 0;
-        _rigidBody.MovePosition(pos);
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("LostFriend"))
+        if (other.CompareTag("LostFriend"))
         {
             AddFriend();
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Checkpoint"))
+        {
+            Debug.Log("Checkpoint");
+            GamestateManager.CurrentCheckpoint = other.transform;
+        }
+
+        if (other.CompareTag("Baudroie"))
+        {
+            GamestateManager.SetGamestate(Gamestate.GameOver);
         }
     }
 
