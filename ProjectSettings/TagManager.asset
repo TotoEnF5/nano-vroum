@@ -10,6 +10,7 @@ TagManager:
   - Destroy Trigger
   - Border1
   - Border2
+  - Baudroie
   layers:
   - Default
   - TransparentFX
