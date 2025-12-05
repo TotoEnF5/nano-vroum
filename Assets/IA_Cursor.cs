@@ -189,6 +189,17 @@ public partial class @IA_Cursor: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""13335332-93c7-48cc-8e51-90fc9ddbaaa4"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""78fc0f99-8547-4716-a7fb-5851923e9db8"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -233,12 +244,12 @@ public partial class @IA_Cursor: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a20383ef-7bb9-4ee3-936c-d58117229ef4"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""3ce5095a-fa77-4448-b6c3-06d798ec1c1f"",
+                    ""path"": ""<Keyboard>/anyKey"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Teleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
