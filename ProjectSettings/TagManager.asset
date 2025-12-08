@@ -12,6 +12,7 @@ TagManager:
   - Border2
   - Baudroie
   - Checkpoint
+  - LineRotator
   layers:
   - Default
   - TransparentFX
