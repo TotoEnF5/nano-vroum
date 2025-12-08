@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -13,16 +14,27 @@ public enum Gamestate
 
 public class GamestateManager : MonoBehaviour
 {
-    public static Transform Character;
-    public static MoveCamera Camera;
+    public static GamestateManager Instance { get; private set; }
     
-    private static Transform _currentCheckpoint;
-    private static Gamestate _gamestate = Gamestate.Playing;
+    public Transform Character;
+    public MoveCamera Camera;
+    
+    private Transform _currentCheckpoint;
+    private Gamestate _gamestate = Gamestate.Playing;
     
     private InputAction _pauseAction;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+        
         _pauseAction = InputSystem.actions.FindAction("Pause");
     }
     
@@ -42,7 +54,7 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
-    public static void SetCheckpoint(Transform checkpoint)
+    public void SetCheckpoint(Transform checkpoint)
     {
         _currentCheckpoint = checkpoint;
         
@@ -50,7 +62,7 @@ public class GamestateManager : MonoBehaviour
         Camera.RegisterState();
     }
 
-    public static void SetGamestate(Gamestate state)
+    public void SetGamestate(Gamestate state)
     {
         _gamestate = state;
 
@@ -71,7 +83,7 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
-    public static Gamestate GetGamestate()
+    public Gamestate GetGamestate()
     {
         return _gamestate;
     }

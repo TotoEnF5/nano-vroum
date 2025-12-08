@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        GamestateManager.Character = this.transform;
+        GamestateManager.Instance.Character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
     }
     
@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
 
         if (other.CompareTag("Baudroie"))
         {
-            GamestateManager.SetGamestate(Gamestate.GameOver);
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
         }
     }
 

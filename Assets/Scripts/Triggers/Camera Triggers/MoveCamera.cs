@@ -33,7 +33,7 @@ public class MoveCamera : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-        GamestateManager.Camera = this;
+        GamestateManager.Instance.Camera = this;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)

@@ -11,7 +11,7 @@ public class Checkpoint : MonoBehaviour
             return;
         }
         
-        GamestateManager.SetCheckpoint(transform);
+        GamestateManager.Instance.SetCheckpoint(transform);
         _triggered = true;
     }
 }
