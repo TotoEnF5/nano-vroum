@@ -3,6 +3,15 @@ using DG.Tweening;
 
 public class MoveCamera : MonoBehaviour
 {
+    private struct CameraState
+    {
+        public Vector3 InitPos;
+        public float InitSize;
+        public Vector3 Goal;
+        public float Size;
+        public float Time;
+    }
+    
     /**
      * Where the camera should end up relative to the trigger.
      */
@@ -17,13 +26,20 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
+    private Vector3 _initPos;
+    private float _initSize;
+    private Tween _movementTween, _sizeTween;
+    private CameraState _lastState, _registeredState;
+    private float _movementElapsed, _sizeElapsed;
 
     private void Awake()
     {
         _camera = GetComponent<Camera>();
+        _initPos = transform.position;
+        _initSize = _camera.orthographicSize;
     }
 
-    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
+    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
     {
         // New camera size
         float camHeight = 2 * newSize;
@@ -59,20 +75,63 @@ public class MoveCamera : MonoBehaviour
             destination.y = transform.position.y;
         }
         
-        StartMovement(destination, newSize, time);
+        StartMovement(destination, newSize, time, ease);
     }
 
-    public void StartMovement(Transform goal, float newSize, float time)
+    public void StartMovement(Transform goal, float newSize, float time, Ease ease)
     {
-        StartMovement(goal.position, newSize, time);
+        StartMovement(goal.position, newSize, time, ease);
     }
 
-    public void StartMovement(Vector3 goal, float newSize, float time)
+    public void StartMovement(Vector3 goal, float newSize, float time, Ease ease)
     {
         goal.z = transform.position.z;
+
+        _lastState.InitPos = transform.position;
+        _lastState.InitSize = _camera.orthographicSize;
+        _lastState.Goal = goal;
+        _lastState.Size = newSize;
+        _lastState.Time = time;
         
         // Allez hop tweenez moi ça
-        transform.DOMove(goal, time).SetEase(Ease.Linear);
-        DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
+        _movementTween = transform.DOMove(goal, time).SetEase(ease);
+        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
+    }
+
+    public void RegisterState()
+    {
+        _registeredState = _lastState;
+
+        if (_movementTween != null)
+        {
+            _movementElapsed = _movementTween.Elapsed();
+        }
+
+        if (_sizeTween != null)
+        {
+            _sizeElapsed = _sizeTween.Elapsed();
+        }
+    }
+
+    public void ResetState()
+    {
+        if (_movementTween == null && _sizeTween == null)
+        {
+            transform.position = _initPos;
+            _camera.orthographicSize = _initSize;
+            return;
+        }
+        
+        _movementTween?.Kill();
+        _sizeTween?.Kill();
+
+        transform.position = _registeredState.InitPos;
+        _camera.orthographicSize = _registeredState.InitSize;
+
+        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time).SetEase(Ease.Linear);
+        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.Size, _registeredState.Time);
+        
+        _movementTween.Goto(_movementElapsed, true);
+        _sizeTween.Goto(_sizeElapsed, true);
     }
 }

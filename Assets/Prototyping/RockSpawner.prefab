@@ -44,10 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70bd54d5a73f2a4dac2afac3eaf6eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  RockPrefab: {fileID: 5257897123985996981, guid: bdb7acdd7f589b84b87eda1d31ad0a2b, type: 3}
+  RockPrefabs:
+  - {fileID: 5257897123985996981, guid: cc36fe31e88f2cc42973cb32c4d1fa34, type: 3}
+  - {fileID: 5257897123985996981, guid: 642c2db4a813eb149ad3bd579d3be8a0, type: 3}
+  - {fileID: 5257897123985996981, guid: fd8ce460ed939a54d9575ffe6b0fcc36, type: 3}
   SpawnOffset: 0
   RockSpawnTimer: 0.75
   RockScaleMin: 2
   RockScaleMax: 4
   ApplyForce: 0
   ForceApplied: {x: 0, y: 0}
+  MainCamera: {fileID: 0}
+  TriggerWhenOnCamera: 0

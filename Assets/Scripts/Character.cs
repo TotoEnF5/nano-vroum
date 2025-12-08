@@ -7,10 +7,12 @@ public class Character : MonoBehaviour
     [SerializeField] private GameObject friendPrefab;
     private Rigidbody2D _rigidBody;
     private Camera mainCamera;
+    private ParticleSystem CollidePs;
 
     private void Awake()
     {
-        GamestateManager.Character = this.transform;
+        CollidePs = GetComponentInChildren<ParticleSystem>();
+        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
     }
@@ -20,6 +22,18 @@ public class Character : MonoBehaviour
         ClampPositionToScreen();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        _rigidBody.linearVelocity = Vector3.zero;
+        CollidePs.Play();
+
+        if(collision.gameObject.CompareTag("killer"))
+        {
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("LostFriend"))
@@ -28,15 +42,9 @@ public class Character : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Checkpoint"))
-        {
-            Debug.Log("Checkpoint");
-            GamestateManager.CurrentCheckpoint = other.transform;
-        }
-
         if (other.CompareTag("Baudroie"))
         {
-            GamestateManager.SetGamestate(Gamestate.GameOver);
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
         }
     }
 

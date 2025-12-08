@@ -1,0 +1,70 @@
+using DG.Tweening;
+using UnityEngine;
+
+public class MoveBaudroie : MonoBehaviour
+{
+    private struct BaudroieState
+    {
+        public Vector3 InitPos;
+        public Vector3 Goal;
+        public float Time;
+    }
+
+    public enum BaudroieDestination
+    {
+        BaudroieTrigger,
+        Custom,
+    }
+
+    private Vector3 _initPos;
+    private BaudroieState _lastState, _registeredState;
+    private Tween _movementTween;
+    private float _movementElapsed;
+
+    private void Awake()
+    {
+        _initPos = transform.position;
+    }
+    
+    public void StartMovement(Transform goal, float time, Ease ease)
+    {
+        StartMovement(goal.position, time, ease);
+    }
+
+    public void StartMovement(Vector3 goal, float time, Ease ease)
+    {
+        goal.z = transform.position.z;
+
+        _lastState.InitPos = transform.position;
+        _lastState.Goal = goal;
+        _lastState.Time = time;
+        
+        _movementTween = transform.DOMove(goal, time).SetEase(ease);
+    }
+    
+    public void RegisterState()
+    {
+        _registeredState = _lastState;
+
+        if (_movementTween != null)
+        {
+            _movementElapsed = _movementTween.Elapsed();
+        }
+    }
+    
+    public void ResetState()
+    {
+        if (_movementTween == null)
+        {
+            transform.position = _initPos;
+            return;
+        }
+        
+        _movementTween?.Kill();
+
+        transform.position = _registeredState.InitPos;
+
+        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time).SetEase(Ease.Linear);
+        _movementTween.Goto(_movementElapsed, true);
+    }
+}

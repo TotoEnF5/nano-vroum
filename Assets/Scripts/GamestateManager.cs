@@ -1,6 +1,10 @@
 using System;
 using DG.Tweening;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum Gamestate
 {
@@ -11,12 +15,57 @@ public enum Gamestate
 
 public class GamestateManager : MonoBehaviour
 {
-    public static Transform Character;
-    public static Transform CurrentCheckpoint;
+    public static GamestateManager Instance { get; private set; }
     
-    private static Gamestate _gamestate = Gamestate.Playing;
+    public Transform character;
+    public MoveCamera camera;
+    public MoveBaudroie baudroie;
+    public Image image;
+    
+    private Transform _currentCheckpoint;
+    private Gamestate _gamestate = Gamestate.Playing;
+    
+    private InputAction _pauseAction;
 
-    public static void SetGamestate(Gamestate state)
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+        
+        _pauseAction = InputSystem.actions.FindAction("Pause");
+    }
+    
+    private void Update()
+    {
+        if (_pauseAction.triggered)
+        {
+            Scene pauseScene = SceneManager.GetSceneByName("MenuPause");
+            if (pauseScene.isLoaded)
+            {
+                SceneManager.UnloadSceneAsync(pauseScene);
+            }
+            else
+            {
+                SceneManager.LoadScene("MenuPause", LoadSceneMode.Additive);
+            }
+        }
+    }
+
+    public void SetCheckpoint(Transform checkpoint)
+    {
+        _currentCheckpoint = checkpoint;
+        
+        camera.RegisterState();
+        baudroie.RegisterState();
+    }
+
+    public void SetGamestate(Gamestate state)
     {
         _gamestate = state;
 
@@ -27,8 +76,7 @@ public class GamestateManager : MonoBehaviour
                 throw new NotImplementedException();
             
            case Gamestate.GameOver:
-               // TODO: Better game over handling
-               Character.transform.DOMove(CurrentCheckpoint.position, 1f);
+               DoGameOverAnimation();
                break;
            
            default:
@@ -36,8 +84,28 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
-    public static Gamestate GetGamestate()
+    public Gamestate GetGamestate()
     {
         return _gamestate;
+    }
+
+    private void DoGameOverAnimation()
+    {
+        DOTween.To((x) =>
+        {
+            Color color = image.color;
+            color.a = x;
+            image.color = color;
+        }, image.color.a, 1f, 2f)
+        .OnComplete(() => {
+            character.position = _currentCheckpoint.position;
+            
+            camera.ResetState();
+            baudroie.ResetState();
+            
+            Color color = image.color;
+            color.a = 0f;
+            image.color = color;
+        });
     }
 }

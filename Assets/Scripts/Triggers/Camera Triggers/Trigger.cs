@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using DG.Tweening;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
@@ -6,6 +6,7 @@ public class Trigger : MonoBehaviour
     public MoveCamera cameraScript;
     public bool doSomething = true;
     public bool showInGame = false;
+    public Ease ease = Ease.Linear;
     public float time = 2;
     public bool matchX = true;
     public bool matchY = true;
@@ -15,6 +16,7 @@ public class Trigger : MonoBehaviour
     [Min(0)] public float newCameraSize = 5;
     private bool hasDoneOnce = false;
     public bool mustBeDoneOnce = false;
+    
     private void Awake()
     {
         Show(showInGame);
@@ -32,15 +34,15 @@ public class Trigger : MonoBehaviour
             hasDoneOnce = true;
             if (cameraDestination == MoveCamera.CameraDestination.Custom)
             {
-                cameraScript.StartMovement(customPosition, newCameraSize, time);
+                cameraScript.StartMovement(customPosition, newCameraSize, time, ease);
             }
             else if (cameraDestination == MoveCamera.CameraDestination.CameraTrigger)
             {
-                cameraScript.StartMovement(scrollingDestination, newCameraSize, time);
+                cameraScript.StartMovement(scrollingDestination, newCameraSize, time, ease);
             }
             else
             {
-                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time, matchX, matchY);
+                cameraScript.StartMovement(transform, cameraDestination, newCameraSize, time, ease, matchX, matchY);
             }
         }
     }
