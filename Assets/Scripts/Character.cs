@@ -10,7 +10,6 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
     }
@@ -36,6 +35,7 @@ public class Character : MonoBehaviour
 
     private void ClampPositionToScreen()
     {
+        return;
         if (mainCamera == null)
         {
             return;

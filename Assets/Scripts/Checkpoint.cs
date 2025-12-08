@@ -6,7 +6,7 @@ public class Checkpoint : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_triggered || !(other.CompareTag("target") || other.CompareTag("Player")))
+        if (_triggered || !other.CompareTag("Player"))
         {
             return;
         }

@@ -33,7 +33,6 @@ public class MoveCamera : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-        GamestateManager.Instance.camera = this;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
@@ -98,9 +97,16 @@ public class MoveCamera : MonoBehaviour
     public void RegisterState()
     {
         _registeredState = _lastState;
-        
-        _movementElapsed = _movementTween.Elapsed();
-        _sizeElapsed = _sizeTween.Elapsed();
+
+        if (_movementTween != null)
+        {
+            _movementElapsed = _movementTween.Elapsed();
+        }
+
+        if (_sizeTween != null)
+        {
+            _sizeElapsed = _sizeTween.Elapsed();
+        }
     }
 
     public void ResetState()

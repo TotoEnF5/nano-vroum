@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5382710187593890842}
   - component: {fileID: 3195217854677681847}
   - component: {fileID: 7728145904605354640}
+  - component: {fileID: 2980898979014245371}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Checkpoint
@@ -197,3 +198,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2980898979014245371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430714608811950707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a38c989c826c6ff3bdaaf57d265651f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
