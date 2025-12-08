@@ -39,8 +39,6 @@ public class MoveBaudroie : MonoBehaviour
         _lastState.Goal = goal;
         _lastState.Time = time;
         
-        Debug.Log(goal);
-
         _movementTween = transform.DOMove(goal, time).SetEase(ease);
     }
     
