@@ -7,9 +7,11 @@ public class Character : MonoBehaviour
     [SerializeField] private GameObject friendPrefab;
     private Rigidbody2D _rigidBody;
     private Camera mainCamera;
+    private ParticleSystem CollidePs;
 
     private void Awake()
     {
+        CollidePs = GetComponentInChildren<ParticleSystem>();
         GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
@@ -23,6 +25,7 @@ public class Character : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _rigidBody.linearVelocity = Vector3.zero;
+        CollidePs.Play();
 
         if(collision.gameObject.CompareTag("killer"))
         {
