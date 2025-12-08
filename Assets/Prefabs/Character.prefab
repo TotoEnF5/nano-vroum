@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5897894823435475012}
   - component: {fileID: 6248581991028863402}
   - component: {fileID: 2953653210937402613}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -238,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c4ee376621390ce4ba5c3213041d4045, type: 3}
       propertyPath: m_Name
       value: FishBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4ee376621390ce4ba5c3213041d4045, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

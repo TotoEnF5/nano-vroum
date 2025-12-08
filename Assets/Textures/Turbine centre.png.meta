@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 03055d7ee89609e40ba61b779e37ab14
+guid: 91d2a3b5c3b782b42ac5f85d111e4d8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2885329517138456735
-    second: algue_0
+      213: 2136361544283293536
+    second: Turbine centre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: algue_0
+      name: Turbine centre_0
       rect:
         serializedVersion: 2
-        x: 206
-        y: 0
-        width: 1613
-        height: 1910
+        x: 852
+        y: 859
+        width: 344
+        height: 331
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f90bcf0a8efba0820800000000000000
-      internalID: 2885329517138456735
+      spriteID: 0678fce6181e5ad10800000000000000
+      internalID: 2136361544283293536
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      algue_0: 2885329517138456735
+      Turbine centre_0: 2136361544283293536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

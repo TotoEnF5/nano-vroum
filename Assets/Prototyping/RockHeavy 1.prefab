@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2026867841052384692}
   - component: {fileID: 5649089080740081325}
   m_Layer: 0
-  m_Name: RockHeavy
+  m_Name: RockHeavy 1
   m_TagString: killer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1553979092060180496, guid: f6e1c0dfac038c04eba31e5adb974886, type: 3}
+  m_Sprite: {fileID: 2024202903480605832, guid: fc7127ded9026d74dae37cc92d601f74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.7066667
+  m_Radius: 0.905
 --- !u!114 &2026867841052384692
 MonoBehaviour:
   m_ObjectHideFlags: 0
