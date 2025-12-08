@@ -18,6 +18,24 @@ public class Chrono : MonoBehaviour
         int secondes = Mathf.FloorToInt(time % 60);
         text.text = minutes.ToString("D2") + ":" + secondes.ToString("D2");
     }
+
+    public void SaveTimeScore()
+    {
+        if (!PlayerPrefs.HasKey("time"))
+        {
+            PlayerPrefs.SetFloat("time", time);
+            return;
+        }
+        if (PlayerPrefs.HasKey("time") && PlayerPrefs.GetFloat("time") <= time)
+        {
+            PlayerPrefs.SetFloat("time", time);
+        }
+    }
+
+    public string getTimeText()
+    {
+        return text.text;
+    }
 }
 
 
