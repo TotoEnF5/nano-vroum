@@ -19,6 +19,7 @@ public class GamestateManager : MonoBehaviour
     
     public Transform character;
     public MoveCamera camera;
+    public MoveBaudroie baudroie;
     public Image image;
     
     private Transform _currentCheckpoint;
@@ -60,8 +61,8 @@ public class GamestateManager : MonoBehaviour
     {
         _currentCheckpoint = checkpoint;
         
-        // TODO: Register game state
         camera.RegisterState();
+        baudroie.RegisterState();
     }
 
     public void SetGamestate(Gamestate state)
@@ -98,7 +99,10 @@ public class GamestateManager : MonoBehaviour
         }, image.color.a, 1f, 2f)
         .OnComplete(() => {
             character.position = _currentCheckpoint.position;
+            
             camera.ResetState();
+            baudroie.ResetState();
+            
             Color color = image.color;
             color.a = 0f;
             image.color = color;

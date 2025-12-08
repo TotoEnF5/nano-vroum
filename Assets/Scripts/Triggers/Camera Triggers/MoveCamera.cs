@@ -26,6 +26,8 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
+    private Vector3 _initPos;
+    private float _initSize;
     private Tween _movementTween, _sizeTween;
     private CameraState _lastState, _registeredState;
     private float _movementElapsed, _sizeElapsed;
@@ -33,10 +35,11 @@ public class MoveCamera : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-        GamestateManager.Instance.camera = this;
+        _initPos = transform.position;
+        _initSize = _camera.orthographicSize;
     }
 
-    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
+    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
     {
         // New camera size
         float camHeight = 2 * newSize;
@@ -72,15 +75,15 @@ public class MoveCamera : MonoBehaviour
             destination.y = transform.position.y;
         }
         
-        StartMovement(destination, newSize, time);
+        StartMovement(destination, newSize, time, ease);
     }
 
-    public void StartMovement(Transform goal, float newSize, float time)
+    public void StartMovement(Transform goal, float newSize, float time, Ease ease)
     {
-        StartMovement(goal.position, newSize, time);
+        StartMovement(goal.position, newSize, time, ease);
     }
 
-    public void StartMovement(Vector3 goal, float newSize, float time)
+    public void StartMovement(Vector3 goal, float newSize, float time, Ease ease)
     {
         goal.z = transform.position.z;
 
@@ -91,20 +94,34 @@ public class MoveCamera : MonoBehaviour
         _lastState.Time = time;
         
         // Allez hop tweenez moi ça
-        _movementTween = transform.DOMove(goal, time).SetEase(Ease.Linear);
+        _movementTween = transform.DOMove(goal, time).SetEase(ease);
         _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 
     public void RegisterState()
     {
         _registeredState = _lastState;
-        
-        _movementElapsed = _movementTween.Elapsed();
-        _sizeElapsed = _sizeTween.Elapsed();
+
+        if (_movementTween != null)
+        {
+            _movementElapsed = _movementTween.Elapsed();
+        }
+
+        if (_sizeTween != null)
+        {
+            _sizeElapsed = _sizeTween.Elapsed();
+        }
     }
 
     public void ResetState()
     {
+        if (_movementTween == null && _sizeTween == null)
+        {
+            transform.position = _initPos;
+            _camera.orthographicSize = _initSize;
+            return;
+        }
+        
         _movementTween?.Kill();
         _sizeTween?.Kill();
 
