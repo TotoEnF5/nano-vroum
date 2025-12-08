@@ -4,6 +4,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum Gamestate
 {
@@ -16,8 +17,9 @@ public class GamestateManager : MonoBehaviour
 {
     public static GamestateManager Instance { get; private set; }
     
-    public Transform Character;
-    public MoveCamera Camera;
+    public Transform character;
+    public MoveCamera camera;
+    public Image image;
     
     private Transform _currentCheckpoint;
     private Gamestate _gamestate = Gamestate.Playing;
@@ -59,7 +61,7 @@ public class GamestateManager : MonoBehaviour
         _currentCheckpoint = checkpoint;
         
         // TODO: Register game state
-        Camera.RegisterState();
+        camera.RegisterState();
     }
 
     public void SetGamestate(Gamestate state)
@@ -73,9 +75,7 @@ public class GamestateManager : MonoBehaviour
                 throw new NotImplementedException();
             
            case Gamestate.GameOver:
-               // TODO: Better game over handling
-               Character.transform.DOMove(_currentCheckpoint.position, 1f);
-               Camera.ResetState();
+               DoGameOverAnimation();
                break;
            
            default:
@@ -86,5 +86,22 @@ public class GamestateManager : MonoBehaviour
     public Gamestate GetGamestate()
     {
         return _gamestate;
+    }
+
+    private void DoGameOverAnimation()
+    {
+        DOTween.To((x) =>
+        {
+            Color color = image.color;
+            color.a = x;
+            image.color = color;
+        }, image.color.a, 1f, 2f)
+        .OnComplete(() => {
+            character.position = _currentCheckpoint.position;
+            camera.ResetState();
+            Color color = image.color;
+            color.a = 0f;
+            image.color = color;
+        });
     }
 }

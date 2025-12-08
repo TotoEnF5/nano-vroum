@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        GamestateManager.Instance.Character = this.transform;
+        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
     }
     
