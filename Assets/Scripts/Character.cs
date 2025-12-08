@@ -20,6 +20,17 @@ public class Character : MonoBehaviour
         ClampPositionToScreen();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        _rigidBody.linearVelocity = Vector3.zero;
+
+        if(collision.gameObject.CompareTag("killer"))
+        {
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("LostFriend"))
