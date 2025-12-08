@@ -16,9 +16,15 @@ public class MoveBaudroie : MonoBehaviour
         Custom,
     }
 
+    private Vector3 _initPos;
     private BaudroieState _lastState, _registeredState;
     private Tween _movementTween;
     private float _movementElapsed;
+
+    private void Awake()
+    {
+        _initPos = transform.position;
+    }
     
     public void StartMovement(Transform goal, float time, Ease ease)
     {
@@ -50,6 +56,12 @@ public class MoveBaudroie : MonoBehaviour
     
     public void ResetState()
     {
+        if (_movementTween == null)
+        {
+            transform.position = _initPos;
+            return;
+        }
+        
         _movementTween?.Kill();
 
         transform.position = _registeredState.InitPos;

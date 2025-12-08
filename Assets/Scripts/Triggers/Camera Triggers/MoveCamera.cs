@@ -26,6 +26,8 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
+    private Vector3 _initPos;
+    private float _initSize;
     private Tween _movementTween, _sizeTween;
     private CameraState _lastState, _registeredState;
     private float _movementElapsed, _sizeElapsed;
@@ -33,6 +35,8 @@ public class MoveCamera : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
+        _initPos = transform.position;
+        _initSize = _camera.orthographicSize;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
@@ -113,6 +117,8 @@ public class MoveCamera : MonoBehaviour
     {
         if (_movementTween == null && _sizeTween == null)
         {
+            transform.position = _initPos;
+            _camera.orthographicSize = _initSize;
             return;
         }
         
