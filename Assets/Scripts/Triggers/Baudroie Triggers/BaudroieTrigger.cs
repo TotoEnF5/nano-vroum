@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class BaudroieTrigger : MonoBehaviour
 {
     public MoveBaudroie baudroie;
     public bool doSomething = true;
     public bool showInGame = false;
+    public Ease ease = Ease.Linear;
     public float time = 2;
     public MoveBaudroie.BaudroieDestination destination = MoveBaudroie.BaudroieDestination.Custom;
     public Transform triggerDestination;
@@ -28,11 +30,11 @@ public class BaudroieTrigger : MonoBehaviour
 
         if (destination == MoveBaudroie.BaudroieDestination.BaudroieTrigger)
         {
-            baudroie.StartMovement(triggerDestination, time);
+            baudroie.StartMovement(triggerDestination, time, ease);
         }
         else if (destination == MoveBaudroie.BaudroieDestination.Custom)
         {
-            baudroie.StartMovement(customPosition, time);
+            baudroie.StartMovement(customPosition, time, ease);
         }
 
         _triggered = oneShot;

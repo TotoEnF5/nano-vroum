@@ -35,7 +35,7 @@ public class MoveCamera : MonoBehaviour
         _camera = GetComponent<Camera>();
     }
 
-    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
+    public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
     {
         // New camera size
         float camHeight = 2 * newSize;
@@ -71,15 +71,15 @@ public class MoveCamera : MonoBehaviour
             destination.y = transform.position.y;
         }
         
-        StartMovement(destination, newSize, time);
+        StartMovement(destination, newSize, time, ease);
     }
 
-    public void StartMovement(Transform goal, float newSize, float time)
+    public void StartMovement(Transform goal, float newSize, float time, Ease ease)
     {
-        StartMovement(goal.position, newSize, time);
+        StartMovement(goal.position, newSize, time, ease);
     }
 
-    public void StartMovement(Vector3 goal, float newSize, float time)
+    public void StartMovement(Vector3 goal, float newSize, float time, Ease ease)
     {
         goal.z = transform.position.z;
 
@@ -90,7 +90,7 @@ public class MoveCamera : MonoBehaviour
         _lastState.Time = time;
         
         // Allez hop tweenez moi ça
-        _movementTween = transform.DOMove(goal, time).SetEase(Ease.Linear);
+        _movementTween = transform.DOMove(goal, time).SetEase(ease);
         _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 

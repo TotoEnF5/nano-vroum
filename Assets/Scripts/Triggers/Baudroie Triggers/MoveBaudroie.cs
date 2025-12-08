@@ -20,12 +20,12 @@ public class MoveBaudroie : MonoBehaviour
     private Tween _movementTween;
     private float _movementElapsed;
     
-    public void StartMovement(Transform goal, float time)
+    public void StartMovement(Transform goal, float time, Ease ease)
     {
-        StartMovement(goal.position, time);
+        StartMovement(goal.position, time, ease);
     }
 
-    public void StartMovement(Vector3 goal, float time)
+    public void StartMovement(Vector3 goal, float time, Ease ease)
     {
         goal.z = transform.position.z;
 
@@ -35,7 +35,7 @@ public class MoveBaudroie : MonoBehaviour
         
         Debug.Log(goal);
 
-        _movementTween = transform.DOMove(goal, time).SetEase(Ease.Linear);
+        _movementTween = transform.DOMove(goal, time).SetEase(ease);
     }
     
     public void RegisterState()
