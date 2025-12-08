@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6f9092f0e3b5c1a489c142361d03a935
+guid: 1262cf7c2e6ccbc4f8b8ce824e0fbc75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2835883687142317966
-    second: Rocher 1 var 256x256_0
+      213: -8251688894267233752
+    second: Tige_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rocher 1 var 256x256_0
+      name: Tige_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 242
-        height: 86
+        x: 610
+        y: 945
+        width: 828
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8f517430351b5720800000000000000
-      internalID: 2835883687142317966
+      spriteID: 82a6a248bac1c7d80800000000000000
+      internalID: -8251688894267233752
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rocher 1 var 256x256_0: 2835883687142317966
+      Tige_0: -8251688894267233752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -27,8 +27,10 @@ public class GamestateManager : MonoBehaviour
     
     private InputAction _pauseAction;
 
+    public Color Color;
     private void Awake()
     {
+        Shader.SetGlobalColor("_GlobalColor", Color);
         if (Instance != null && Instance != this)
         {
             Destroy(this);
