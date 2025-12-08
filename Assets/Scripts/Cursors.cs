@@ -49,11 +49,15 @@ public class Cursors : MonoBehaviour
         targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         Image1 = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
         Image2 = GameObject.FindGameObjectWithTag("Border2").GetComponent<SpriteRenderer>();
         toClampTo = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
         //Center the cursor when spawning
         // targetDestination n'est plus nécessaire ici
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
