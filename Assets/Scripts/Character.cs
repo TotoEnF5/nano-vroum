@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        GamestateManager.Character = this.transform;
+        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
     }
@@ -28,15 +28,9 @@ public class Character : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Checkpoint"))
-        {
-            Debug.Log("Checkpoint");
-            GamestateManager.CurrentCheckpoint = other.transform;
-        }
-
         if (other.CompareTag("Baudroie"))
         {
-            GamestateManager.SetGamestate(Gamestate.GameOver);
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
         }
     }
 
