@@ -91,7 +91,7 @@ public class MoveCamera : MonoBehaviour
         _lastState.Time = time;
         
         // Allez hop tweenez moi ça
-        _movementTween = transform.DOMove(goal, time);
+        _movementTween = transform.DOMove(goal, time).SetEase(Ease.Linear);
         _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 
@@ -111,7 +111,7 @@ public class MoveCamera : MonoBehaviour
         transform.position = _registeredState.InitPos;
         _camera.orthographicSize = _registeredState.InitSize;
 
-        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time);
+        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time).SetEase(Ease.Linear);
         _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.Size, _registeredState.Time);
         
         _movementTween.Goto(_movementElapsed, true);

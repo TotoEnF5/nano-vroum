@@ -13,7 +13,8 @@ public class Trigger : MonoBehaviour
     public Transform scrollingDestination;
     public Vector3 customPosition;
     [Min(0)] public float newCameraSize = 5;
-
+    private bool hasDoneOnce = false;
+    public bool mustBeDoneOnce = false;
     private void Awake()
     {
         Show(showInGame);
@@ -26,8 +27,9 @@ public class Trigger : MonoBehaviour
             return;
         }
         
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && ((mustBeDoneOnce && !hasDoneOnce)||!mustBeDoneOnce))
         {
+            hasDoneOnce = true;
             if (cameraDestination == MoveCamera.CameraDestination.Custom)
             {
                 cameraScript.StartMovement(customPosition, newCameraSize, time);

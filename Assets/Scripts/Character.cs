@@ -6,13 +6,20 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private GameObject friendPrefab;
     private Rigidbody2D _rigidBody;
+    private Camera mainCamera;
 
     private void Awake()
     {
         GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
     }
-    
+
+    private void Update()
+    {
+        ClampPositionToScreen();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("LostFriend"))
@@ -25,6 +32,33 @@ public class Character : MonoBehaviour
         {
             GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
         }
+    }
+
+    private void ClampPositionToScreen()
+    {
+        if (mainCamera == null)
+        {
+            return;
+        }
+
+        Vector3 minScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - mainCamera.transform.position.z));
+        Vector3 maxScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - mainCamera.transform.position.z));
+
+        Vector3 currentPosition = transform.position;
+
+        currentPosition.x = Mathf.Clamp(
+            currentPosition.x,
+            minScreenBounds.x,
+            maxScreenBounds.x
+        );
+
+        currentPosition.y = Mathf.Clamp(
+            currentPosition.y,
+            minScreenBounds.y,
+            maxScreenBounds.y
+        );
+
+        transform.position = currentPosition;
     }
 
     private void AddFriend()
