@@ -9,7 +9,6 @@ public class SimpleRotate : MonoBehaviour
     [Range(-360,360)]
     public float AngleIncrement = 360f;
 
-
     [SerializeField]
     private float m_rotationTime = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +22,6 @@ public class SimpleRotate : MonoBehaviour
     {
         m_rotationTime = m_rotationTime + Time.deltaTime * speed;
         
-        float rotationStrength = CurveRotate.Evaluate(m_rotationTime);
         transform.eulerAngles = Vector3.Lerp(startingRotation, startingRotation + new Vector3(0, 0, AngleIncrement), CurveRotate.Evaluate(m_rotationTime));
         if (m_rotationTime >= 1)
         {
