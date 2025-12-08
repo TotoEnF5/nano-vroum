@@ -11,6 +11,7 @@ public enum Gamestate
     Playing,
     Paused,
     GameOver,
+    Win,
 }
 
 public class GamestateManager : MonoBehaviour
@@ -73,6 +74,7 @@ public class GamestateManager : MonoBehaviour
         {
             case Gamestate.Playing:
             case Gamestate.Paused:
+            case Gamestate.Win:
                 throw new NotImplementedException();
             
            case Gamestate.GameOver:
