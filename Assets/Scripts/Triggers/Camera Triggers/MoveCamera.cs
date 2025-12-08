@@ -3,6 +3,15 @@ using DG.Tweening;
 
 public class MoveCamera : MonoBehaviour
 {
+    private struct CameraState
+    {
+        public Vector3 InitPos;
+        public float InitSize;
+        public Vector3 Goal;
+        public float Size;
+        public float Time;
+    }
+    
     /**
      * Where the camera should end up relative to the trigger.
      */
@@ -17,10 +26,14 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
+    private Tween _movementTween, _sizeTween;
+    private CameraState _lastState, _registeredState;
+    private float _movementElapsed, _sizeElapsed;
 
     private void Awake()
     {
         _camera = GetComponent<Camera>();
+        GamestateManager.Camera = this;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, bool matchX, bool matchY)
@@ -70,9 +83,38 @@ public class MoveCamera : MonoBehaviour
     public void StartMovement(Vector3 goal, float newSize, float time)
     {
         goal.z = transform.position.z;
+
+        _lastState.InitPos = transform.position;
+        _lastState.InitSize = _camera.orthographicSize;
+        _lastState.Goal = goal;
+        _lastState.Size = newSize;
+        _lastState.Time = time;
         
         // Allez hop tweenez moi ça
-        transform.DOMove(goal, time);
-        DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
+        _movementTween = transform.DOMove(goal, time);
+        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
+    }
+
+    public void RegisterState()
+    {
+        _registeredState = _lastState;
+        
+        _movementElapsed = _movementTween.Elapsed();
+        _sizeElapsed = _sizeTween.Elapsed();
+    }
+
+    public void ResetState()
+    {
+        _movementTween?.Kill();
+        _sizeTween?.Kill();
+
+        transform.position = _registeredState.InitPos;
+        _camera.orthographicSize = _registeredState.InitSize;
+
+        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time);
+        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.Size, _registeredState.Time);
+        
+        _movementTween.Goto(_movementElapsed, true);
+        _sizeTween.Goto(_sizeElapsed, true);
     }
 }

@@ -21,12 +21,6 @@ public class Character : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Checkpoint"))
-        {
-            Debug.Log("Checkpoint");
-            GamestateManager.CurrentCheckpoint = other.transform;
-        }
-
         if (other.CompareTag("Baudroie"))
         {
             GamestateManager.SetGamestate(Gamestate.GameOver);

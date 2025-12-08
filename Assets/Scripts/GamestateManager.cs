@@ -14,8 +14,9 @@ public enum Gamestate
 public class GamestateManager : MonoBehaviour
 {
     public static Transform Character;
-    public static Transform CurrentCheckpoint;
+    public static MoveCamera Camera;
     
+    private static Transform _currentCheckpoint;
     private static Gamestate _gamestate = Gamestate.Playing;
     
     private InputAction _pauseAction;
@@ -41,6 +42,14 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
+    public static void SetCheckpoint(Transform checkpoint)
+    {
+        _currentCheckpoint = checkpoint;
+        
+        // TODO: Register game state
+        Camera.RegisterState();
+    }
+
     public static void SetGamestate(Gamestate state)
     {
         _gamestate = state;
@@ -53,7 +62,8 @@ public class GamestateManager : MonoBehaviour
             
            case Gamestate.GameOver:
                // TODO: Better game over handling
-               Character.transform.DOMove(CurrentCheckpoint.position, 1f);
+               Character.transform.DOMove(_currentCheckpoint.position, 1f);
+               Camera.ResetState();
                break;
            
            default:

@@ -10,13 +10,6 @@ public class VisibilityTrigger : MonoBehaviour
 
     private bool _spawned = false;
 
-    private void Update()
-    {
-        Vector3 pos = transform.position;
-        pos.x += Mathf.Sin(Time.time);
-        transform.position = pos;
-    }
-
     private void OnBecameVisible()
     {
         if (_spawned)
