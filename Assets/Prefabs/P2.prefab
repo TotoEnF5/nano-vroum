@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 1, b: 0.61099124, a: 1}
   m_FlipX: 0
@@ -105,6 +105,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursors
   moveSpeed: 10
+  targetTravelTime: 10
+  pushForce: 10
+  destinationTolerance: 0.5
+  velocityReductionFactor: 0.1
+  minSpeedForRotation: 0.5
+  rotationSpeed: 10
 --- !u!114 &1064321218687518631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +156,12 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 0f56349f-de9f-493a-aff1-c660a995247f
     m_ActionName: Controls/Teleport
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a12a77f3-ebfa-46d4-936a-78eaa69b2422
+    m_ActionName: Controls/Pause
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
