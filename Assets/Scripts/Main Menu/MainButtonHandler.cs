@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class MainButtonHandler : MonoBehaviour
 {
@@ -37,4 +38,5 @@ public class MainButtonHandler : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
