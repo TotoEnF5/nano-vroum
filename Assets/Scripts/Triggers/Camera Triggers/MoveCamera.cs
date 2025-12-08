@@ -72,7 +72,7 @@ public class MoveCamera : MonoBehaviour
         goal.z = transform.position.z;
         
         // Allez hop tweenez moi ça
-        transform.DOMove(goal, time);
+        transform.DOMove(goal, time).SetEase(Ease.Linear);
         DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
     }
 }
