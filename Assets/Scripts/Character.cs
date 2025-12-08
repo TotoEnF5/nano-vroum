@@ -86,5 +86,6 @@ public class Character : MonoBehaviour
         friend.transform.position = randomVec3;
         
         // TODO: When getting a new friend, increase the moving speed
+        GamestateManager.Instance.IncreaseSpeed();
     }
 }

@@ -58,6 +58,11 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
+    public void IncreaseSpeed()
+    {
+        DOTween.timeScale *= 1.2f;
+    }
+
     public void SetCheckpoint(Transform checkpoint)
     {
         _currentCheckpoint = checkpoint;
@@ -93,6 +98,8 @@ public class GamestateManager : MonoBehaviour
 
     private void DoGameOverAnimation()
     {
+        DOTween.timeScale = 1f;
+        
         DOTween.To((x) =>
         {
             Color color = image.color;
