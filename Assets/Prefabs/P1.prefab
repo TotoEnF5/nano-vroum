@@ -168,7 +168,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
+  m_SortingOrder: 155
   m_SortingOrder: 50
+
   m_Sprite: {fileID: -3175767800308342190, guid: 8a9fa0b9e8365f4449a2ce4219fc7dfb, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -192,13 +194,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4309921f4ee5449bcb371b31d4c550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursors
-  moveSpeed: 10
-  targetTravelTime: 0.4
-  pushForce: 15
+  moveSpeed: 50
+  targetTravelTime: 0.5
+  pushForce: 10
   destinationTolerance: 2
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3
   rotationSpeed: 10
+  Image1: {fileID: 0}
+  Image2: {fileID: 0}
+  toClampTo: {fileID: 0}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
