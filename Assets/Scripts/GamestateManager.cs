@@ -61,7 +61,6 @@ public class GamestateManager : MonoBehaviour
     {
         _currentCheckpoint = checkpoint;
         
-        // TODO: Register game state
         camera.RegisterState();
         baudroie.RegisterState();
     }
@@ -101,7 +100,7 @@ public class GamestateManager : MonoBehaviour
         .OnComplete(() => {
             character.position = _currentCheckpoint.position;
             
-            // camera.ResetState();
+            camera.ResetState();
             baudroie.ResetState();
             
             Color color = image.color;

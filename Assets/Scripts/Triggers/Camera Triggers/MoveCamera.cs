@@ -111,6 +111,11 @@ public class MoveCamera : MonoBehaviour
 
     public void ResetState()
     {
+        if (_movementTween == null && _sizeTween == null)
+        {
+            return;
+        }
+        
         _movementTween?.Kill();
         _sizeTween?.Kill();
 

@@ -35,7 +35,6 @@ public class Character : MonoBehaviour
 
     private void ClampPositionToScreen()
     {
-        return;
         if (mainCamera == null)
         {
             return;
