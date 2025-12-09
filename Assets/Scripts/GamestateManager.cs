@@ -119,10 +119,8 @@ public class GamestateManager : MonoBehaviour
             Color color = image.color;
             color.a = x;
             image.color = color;
-            Debug.LogError("bbb");
         }, image.color.a, 1f, 2f)
         .OnComplete(() => {
-            Debug.LogError(_currentCheckpoint);
             if (_currentCheckpoint != null)
             {
                 character.position = _currentCheckpoint.position;
@@ -132,7 +130,6 @@ public class GamestateManager : MonoBehaviour
                 character.position = _initPlayerPos;
             }
             
-            Debug.LogError("Resetting state");
             cameraScript.ResetState();
             baudroie.ResetState();
 
@@ -157,7 +154,6 @@ public class GamestateManager : MonoBehaviour
                     vt.ResetState();
                 }
             }
-            Debug.LogError("Reset state");
 
             _doingGameOverAnimation = false;
             
