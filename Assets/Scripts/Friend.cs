@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Friend : MonoBehaviour
 {
+    public Transform character;
+    
     private Rigidbody2D _rigidBody;
 
     private void Awake()
@@ -12,7 +14,7 @@ public class Friend : MonoBehaviour
     
     private void FixedUpdate()
     {
-        Vector3 force = transform.parent.position - transform.position;
+        Vector3 force = character.position - transform.position;
         force *= 5;
         _rigidBody.AddForce(force);
 

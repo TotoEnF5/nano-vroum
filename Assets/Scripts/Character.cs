@@ -76,7 +76,9 @@ public class Character : MonoBehaviour
 
     private void AddFriend()
     {
-        GameObject friend = Instantiate(friendPrefab, transform);
+        GameObject friend = Instantiate(friendPrefab);
+
+        friend.GetComponent<Friend>().character = transform;
         
         // Set position
         Vector2 random = Random.insideUnitCircle * 2;
