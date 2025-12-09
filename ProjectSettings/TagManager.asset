@@ -16,6 +16,7 @@ TagManager:
   - LineRotator
   - Trigger
   - Rocks
+  - DashManager
   layers:
   - Default
   - TransparentFX

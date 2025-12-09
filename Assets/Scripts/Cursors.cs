@@ -33,6 +33,8 @@ public class Cursors : MonoBehaviour
     SpriteRenderer sr;
     private Camera mainCamera;
 
+    public GameObject dashManager;
+
     private Rigidbody2D cursorRB;
     // Cette variable n'est plus utilisée pour la force simple
     private Vector2 targetDestination;
@@ -48,6 +50,8 @@ public class Cursors : MonoBehaviour
         targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
         cursorRB = GetComponent<Rigidbody2D>();
+        dashManager = GameObject.FindGameObjectWithTag("DashManager");
+        dashManager.SetActive(false);
         //Center the cursor when spawning
         // targetDestination n'est plus nécessaire ici
         //Quelle galère
@@ -133,9 +137,13 @@ public class Cursors : MonoBehaviour
             targetRB.linearVelocity = Vector2.zero;
             targetRB.AddForce(requiredImpulse, ForceMode2D.Impulse); // Utilisation de l'impulsion calculée
 
-            // 3. Mettre fin au tour (canAct = false) et appeler pm.EndTurn()
+            // 3. Jouer le son de dash
+            dashManager.SetActive(true);
+
+            // 4. Mettre fin au tour (canAct = false) et appeler pm.EndTurn()
             canAct = false;
             pm.EndTurn();
+            dashManager.SetActive(false);
 
 
             // La durée du DOTween est maintenant simplement le targetTravelTime
