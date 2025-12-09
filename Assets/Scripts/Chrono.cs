@@ -4,8 +4,8 @@ using UnityEngine;
 public class Chrono : MonoBehaviour
 {
 
-    TextMeshProUGUI text;
-    float time = 0f;
+    public TextMeshProUGUI text;
+    public float time = 0f;
     private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();

@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
 using DG.Tweening;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -22,6 +25,8 @@ public class GamestateManager : MonoBehaviour
     public MoveBaudroie baudroie;
     public Image image;
     public StartGameScript startGameScript;
+    public Chrono chrono;
+    public TMP_Text bravo;
     
     private Transform _currentCheckpoint;
     private Vector3 _initPlayerPos;
@@ -34,6 +39,7 @@ public class GamestateManager : MonoBehaviour
     public float GlobalTimeIncrement = 0.2f;
 
     public Color Color;
+    
     private void Awake()
     {
         Shader.SetGlobalColor("_GlobalColor", Color);
@@ -48,6 +54,8 @@ public class GamestateManager : MonoBehaviour
 
         _initPlayerPos = character.position;
         _pauseAction = InputSystem.actions.FindAction("Pause");
+        
+        bravo.gameObject.SetActive(false);
     }
     
     private void Update()
@@ -190,7 +198,17 @@ public class GamestateManager : MonoBehaviour
         }, image.color.a, 1f, 2f)
         .OnComplete(() =>
         {
-            SceneManager.LoadScene("MenuMain");
+            String baseText = bravo.text;
+            float time = chrono.time;
+            bravo.text += time + " seconds.";
+            bravo.gameObject.SetActive(true);
+
+            DOTween.To((x) => { }, 0, 1, 10f).
+                OnComplete(() =>
+                {
+                    bravo.text = baseText;
+                    SceneManager.LoadScene("MenuMain");
+                });
         });
     }
 }
