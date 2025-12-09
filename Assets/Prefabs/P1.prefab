@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4433116695248821095}
   - component: {fileID: 369799303644227577}
   - component: {fileID: 5065267749940895532}
+  - component: {fileID: 8827558666977373516}
   m_Layer: 4
   m_Name: P1
   m_TagString: Untagged
@@ -199,9 +200,6 @@ MonoBehaviour:
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3
   rotationSpeed: 10
-  Image1: {fileID: 0}
-  Image2: {fileID: 0}
-  toClampTo: {fileID: 0}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5107,3 +5105,30 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.76
+--- !u!50 &8827558666977373516
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303675174989248430}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

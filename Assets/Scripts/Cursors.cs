@@ -31,10 +31,6 @@ public class Cursors : MonoBehaviour
     ParticleSystem ps;
     SpriteRenderer sr;
     private Camera mainCamera;
-
-    public SpriteRenderer Image1;
-    public SpriteRenderer Image2;
-    public SpriteRenderer toClampTo;
     // Cette variable n'est plus utilisée pour la force simple
     private Vector2 targetDestination;
 
@@ -48,9 +44,6 @@ public class Cursors : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
-        Image1 = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
-        Image2 = GameObject.FindGameObjectWithTag("Border2").GetComponent<SpriteRenderer>();
-        toClampTo = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
         //Center the cursor when spawning
         // targetDestination n'est plus nécessaire ici
         //Quelle galère
@@ -61,7 +54,6 @@ public class Cursors : MonoBehaviour
         ps.startColor = sr.color;
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
-        ClampPositionToScreen();
     }
 
     private void FixedUpdate()
@@ -163,40 +155,5 @@ public class Cursors : MonoBehaviour
         {
             ps.enableEmission = false;
         }
-    }
-    public void SetClamp(int playerIndex)
-    {
-        if(playerIndex == 0)
-        {
-            toClampTo = Image1;
-
-        }
-        else
-        {
-            toClampTo = Image2;
-        }
-    }
-
-    private void ClampPositionToScreen()
-    {
-        Vector3 min = new Vector3( toClampTo.transform.position.x - toClampTo.size.x / 2f, toClampTo.transform.position.y - toClampTo.size.y / 2f);
-        Vector3 max = new Vector3(toClampTo.transform.position.x + toClampTo.size.x / 2f, toClampTo.transform.position.y + toClampTo.size.y / 2f);
-
- 
-
-        Vector3 currentPosition = transform.position;
-
-        currentPosition.x = Mathf.Clamp(
-            currentPosition.x,
-            min.x,
-            max.x
-        );
-
-        currentPosition.y = Mathf.Clamp(
-            currentPosition.y,
-            min.y,
-            max.y
-        );
-        transform.position = currentPosition;
     }
 }

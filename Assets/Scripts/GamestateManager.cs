@@ -30,6 +30,9 @@ public class GamestateManager : MonoBehaviour
     
     private InputAction _pauseAction;
 
+    public float GlobalTime = 1;
+    public float GlobalTimeIncrement = 0.2f;
+
     public Color Color;
     private void Awake()
     {
@@ -65,7 +68,8 @@ public class GamestateManager : MonoBehaviour
 
     public void IncreaseSpeed()
     {
-        DOTween.timeScale *= 1.2f;
+        DOTween.timeScale += GlobalTimeIncrement;
+        GlobalTime += GlobalTimeIncrement;
     }
 
     public void SetCheckpoint(Transform checkpoint)
@@ -113,7 +117,7 @@ public class GamestateManager : MonoBehaviour
         
         _doingGameOverAnimation = true;
         DOTween.timeScale = 1f;
-        
+        GlobalTime = 1;
         DOTween.To((x) =>
         {
             Color color = image.color;
