@@ -177,26 +177,31 @@ public class Cursors : MonoBehaviour
         }
     }
 
+
     private void ClampPositionToScreen()
     {
-        Vector3 min = new Vector3( toClampTo.transform.position.x - toClampTo.size.x / 2f, toClampTo.transform.position.y - toClampTo.size.y / 2f);
-        Vector3 max = new Vector3(toClampTo.transform.position.x + toClampTo.size.x / 2f, toClampTo.transform.position.y + toClampTo.size.y / 2f);
+        if (mainCamera == null)
+        {
+            return;
+        }
 
- 
+        Vector3 minScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - mainCamera.transform.position.z));
+        Vector3 maxScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - mainCamera.transform.position.z));
 
         Vector3 currentPosition = transform.position;
 
         currentPosition.x = Mathf.Clamp(
             currentPosition.x,
-            min.x,
-            max.x
+            minScreenBounds.x,
+            maxScreenBounds.x
         );
 
         currentPosition.y = Mathf.Clamp(
             currentPosition.y,
-            min.y,
-            max.y
+            minScreenBounds.y,
+            maxScreenBounds.y
         );
+
         transform.position = currentPosition;
     }
 }
