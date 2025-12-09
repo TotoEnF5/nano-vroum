@@ -28,6 +28,12 @@ public class MoveBaudroie : MonoBehaviour
         _lastState.Time = 0f;
         _lastState.Elapsed = 0f;
         _lastState.WasTweening = false;
+        
+        _registeredState.InitPos = transform.position;
+        _registeredState.GoalPos = transform.position;
+        _registeredState.Time = 0f;
+        _registeredState.Elapsed = 0f;
+        _registeredState.WasTweening = false;
     }
     
     public void StartMovement(Transform goal, float time, Ease ease)
@@ -37,7 +43,6 @@ public class MoveBaudroie : MonoBehaviour
 
     public void StartMovement(Vector3 goal, float time, Ease ease)
     {
-        Debug.LogError("movement started");
         goal.z = transform.position.z;
 
         _lastState.InitPos = transform.position;
@@ -76,9 +81,8 @@ public class MoveBaudroie : MonoBehaviour
 
         if (_registeredState.WasTweening)
         {
-            Debug.LogError("other movement started");
             _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
-            _movementTween.Goto(_registeredState.Elapsed);
+            _movementTween.Goto(_registeredState.Elapsed, true);
         }
     }
 }

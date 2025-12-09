@@ -149,6 +149,12 @@ public class GamestateManager : MonoBehaviour
                     t.ResetState();
                 }
 
+                ScrollingSection s = trigger.GetComponent<ScrollingSection>();
+                if (s != null)
+                {
+                    s.ResetState();
+                }
+
                 BaudroieTrigger bt = trigger.GetComponent<BaudroieTrigger>();
                 if (bt != null)
                 {

@@ -24,4 +24,13 @@ public class ScrollingSection : MonoBehaviour
         destination.showInGame = showInGame;
         destination.Show(showInGame);
     }
+
+    public void ResetState()
+    {
+        Trigger source = transform.GetChild(0).GetComponent<Trigger>();
+        Trigger destination = transform.GetChild(1).GetComponent<Trigger>();
+        
+        source.ResetState();
+        destination.ResetState();
+    }
 }
