@@ -100,3 +100,4 @@ InitTestScene*.unity*
 
 # Rider .idea settings
 .idea/
+Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
