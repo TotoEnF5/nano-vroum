@@ -10260,7 +10260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 28335400977295845, guid: 746fd880cf2606a44a0969bdd2c27337, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810596023284790266, guid: 746fd880cf2606a44a0969bdd2c27337, type: 3}
       propertyPath: m_Size.y
@@ -17462,6 +17462,22 @@ PrefabInstance:
     - target: {fileID: 8452684144166379904, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
       propertyPath: m_Name
       value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835243316745083269, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
+      propertyPath: inactive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835243316745083269, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
+      propertyPath: inactive.b
+      value: 0.5377358
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835243316745083269, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
+      propertyPath: inactive.g
+      value: 0.5377358
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835243316745083269, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
+      propertyPath: inactive.r
+      value: 0.5377358
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
