@@ -43,7 +43,6 @@ public class MoveBaudroie : MonoBehaviour
 
     public void StartMovement(Vector3 goal, float time, Ease ease)
     {
-        Debug.LogError("movement started");
         goal.z = transform.position.z;
 
         _lastState.InitPos = transform.position;
@@ -82,9 +81,8 @@ public class MoveBaudroie : MonoBehaviour
 
         if (_registeredState.WasTweening)
         {
-            Debug.LogError("other movement started");
             _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
-            _movementTween.Goto(_registeredState.Elapsed);
+            _movementTween.Goto(_registeredState.Elapsed, true);
         }
     }
 }

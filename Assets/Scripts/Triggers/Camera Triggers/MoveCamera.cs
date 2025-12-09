@@ -110,9 +110,6 @@ public class MoveCamera : MonoBehaviour
 
     public void RegisterState()
     {
-        // zojidhugyvcehfbohgiytucf 
-        Debug.Log($"caca register state {_lastState.InitSize} {_lastState.GoalSize}");
-        
         _registeredState.WasTweening = _lastState.WasTweening;
         _registeredState.InitPos = _lastState.InitPos;
         _registeredState.InitSize = _lastState.InitSize;
@@ -143,8 +140,8 @@ public class MoveCamera : MonoBehaviour
             _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
             _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.GoalSize, _registeredState.Time);
             
-            _movementTween.Goto(_registeredState.Elapsed);
-            _sizeTween.Goto(_registeredState.Elapsed);
+            _movementTween.Goto(_registeredState.Elapsed, true);
+            _sizeTween.Goto(_registeredState.Elapsed, true);
         }
     }
 }
