@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(IA_Cursor))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Cursors : MonoBehaviour
 {
     [Header("Cursor Movement")]
@@ -32,9 +33,7 @@ public class Cursors : MonoBehaviour
     SpriteRenderer sr;
     private Camera mainCamera;
 
-    public SpriteRenderer Image1;
-    public SpriteRenderer Image2;
-    public SpriteRenderer toClampTo;
+    private Rigidbody2D cursorRB;
     // Cette variable n'est plus utilisée pour la force simple
     private Vector2 targetDestination;
 
@@ -48,9 +47,7 @@ public class Cursors : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
-        Image1 = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
-        Image2 = GameObject.FindGameObjectWithTag("Border2").GetComponent<SpriteRenderer>();
-        toClampTo = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
+        cursorRB = GetComponent<Rigidbody2D>();
         //Center the cursor when spawning
         // targetDestination n'est plus nécessaire ici
         //Quelle galère
@@ -60,12 +57,21 @@ public class Cursors : MonoBehaviour
     {
         ps.startColor = sr.color;
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
-        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
         ClampPositionToScreen();
     }
 
     private void FixedUpdate()
     {
+        if (cursorRB != null)
+        {
+            // Calculer le mouvement désiré.
+            Vector2 movementVector = moveInput * moveSpeed;
+
+            // Appliquer la vélocité.
+            // Cela déplace le Rigidbody2D dans le FixedUpdate, le moment correct
+            // pour les manipulations de physique.
+            cursorRB.linearVelocity = movementVector;
+        }
         AlignRotationWithVelocity();
     }
     private void AlignRotationWithVelocity()
@@ -162,18 +168,6 @@ public class Cursors : MonoBehaviour
         else
         {
             ps.enableEmission = false;
-        }
-    }
-    public void SetClamp(int playerIndex)
-    {
-        if(playerIndex == 0)
-        {
-            toClampTo = Image1;
-
-        }
-        else
-        {
-            toClampTo = Image2;
         }
     }
 
