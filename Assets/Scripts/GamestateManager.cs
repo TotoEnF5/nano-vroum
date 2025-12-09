@@ -126,8 +126,9 @@ public class GamestateManager : MonoBehaviour
             Color color = image.color;
             color.a = x;
             image.color = color;
-        }, image.color.a, 1f, 2f)
-        .OnComplete(() => {
+        }, image.color.a, 1f, 1f)
+        .OnComplete(() =>
+        {
             if (_currentCheckpoint != null)
             {
                 character.position = _currentCheckpoint.position;
@@ -136,7 +137,7 @@ public class GamestateManager : MonoBehaviour
             {
                 character.position = _initPlayerPos;
             }
-            
+
             cameraScript.ResetState();
             baudroie.ResetState();
 
@@ -160,7 +161,7 @@ public class GamestateManager : MonoBehaviour
                 {
                     bt.ResetState();
                 }
-                
+
                 VisibilityTrigger vt = trigger.GetComponent<VisibilityTrigger>();
                 if (vt != null)
                 {
@@ -169,10 +170,13 @@ public class GamestateManager : MonoBehaviour
             }
 
             _doingGameOverAnimation = false;
-            
-            Color color = image.color;
-            color.a = 0f;
-            image.color = color;
+
+            DOTween.To((x) =>
+            {
+                Color color = image.color;
+                color.a = x;
+                image.color = color;
+            }, image.color.a, 0f, 0.5f);
         });
     }
 
