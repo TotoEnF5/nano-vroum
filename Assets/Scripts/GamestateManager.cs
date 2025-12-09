@@ -11,6 +11,7 @@ public enum Gamestate
     Playing,
     Paused,
     GameOver,
+    Win,
 }
 
 public class GamestateManager : MonoBehaviour
@@ -18,7 +19,8 @@ public class GamestateManager : MonoBehaviour
     public static GamestateManager Instance { get; private set; }
     
     public Transform character;
-    public MoveCamera camera;
+    public MoveCamera cameraScript;
+    public MoveBaudroie baudroie;
     public Image image;
     
     private Transform _currentCheckpoint;
@@ -56,12 +58,17 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
+    public void IncreaseSpeed()
+    {
+        DOTween.timeScale *= 1.2f;
+    }
+
     public void SetCheckpoint(Transform checkpoint)
     {
         _currentCheckpoint = checkpoint;
         
-        // TODO: Register game state
-        camera.RegisterState();
+        cameraScript.RegisterState();
+        baudroie.RegisterState();
     }
 
     public void SetGamestate(Gamestate state)
@@ -73,6 +80,10 @@ public class GamestateManager : MonoBehaviour
             case Gamestate.Playing:
             case Gamestate.Paused:
                 throw new NotImplementedException();
+            
+            case Gamestate.Win:
+                DoWinAnimation();
+                break;
             
            case Gamestate.GameOver:
                DoGameOverAnimation();
@@ -90,6 +101,8 @@ public class GamestateManager : MonoBehaviour
 
     private void DoGameOverAnimation()
     {
+        DOTween.timeScale = 1f;
+        
         DOTween.To((x) =>
         {
             Color color = image.color;
@@ -98,10 +111,49 @@ public class GamestateManager : MonoBehaviour
         }, image.color.a, 1f, 2f)
         .OnComplete(() => {
             character.position = _currentCheckpoint.position;
-            camera.ResetState();
+            
+            cameraScript.ResetState();
+            baudroie.ResetState();
+
+            GameObject[] triggers = GameObject.FindGameObjectsWithTag("Trigger");
+            foreach (GameObject trigger in triggers)
+            {
+                Trigger t = trigger.GetComponent<Trigger>();
+                if (t != null)
+                {
+                    t.ResetState();
+                }
+
+                BaudroieTrigger bt = trigger.GetComponent<BaudroieTrigger>();
+                if (bt != null)
+                {
+                    bt.ResetState();
+                }
+                
+                VisibilityTrigger vt = trigger.GetComponent<VisibilityTrigger>();
+                if (vt != null)
+                {
+                    vt.ResetState();
+                }
+            }
+            
             Color color = image.color;
             color.a = 0f;
             image.color = color;
+        });
+    }
+
+    public void DoWinAnimation()
+    {
+        DOTween.To((x) =>
+        {
+            Color color = image.color;
+            color.a = x;
+            image.color = color;
+        }, image.color.a, 1f, 2f)
+        .OnComplete(() =>
+        {
+            SceneManager.LoadScene("MenuMain");
         });
     }
 }

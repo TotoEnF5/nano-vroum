@@ -1,10 +1,9 @@
+using System;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+public class WinTrigger : MonoBehaviour
 {
     public bool showInGame = false;
-    
-    private bool _triggered = false;
     
     private void Awake()
     {
@@ -13,12 +12,11 @@ public class Checkpoint : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_triggered || !other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
             return;
         }
         
-        GamestateManager.Instance.SetCheckpoint(transform);
-        _triggered = true;
+        GamestateManager.Instance.SetGamestate(Gamestate.Win);
     }
 }

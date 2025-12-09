@@ -12,7 +12,6 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         CollidePs = GetComponentInChildren<ParticleSystem>();
-        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
     }
@@ -86,5 +85,6 @@ public class Character : MonoBehaviour
         friend.transform.position = randomVec3;
         
         // TODO: When getting a new friend, increase the moving speed
+        GamestateManager.Instance.IncreaseSpeed();
     }
 }
