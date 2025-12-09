@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6019348078796670720}
   - component: {fileID: 2026867841052384692}
   - component: {fileID: 5649089080740081325}
+  - component: {fileID: 6540690249499146576}
   m_Layer: 0
   m_Name: RockHeavy 2
   m_TagString: killer
@@ -185,3 +186,15 @@ MonoBehaviour:
   ActivateWhenCloseToCamera: 0
   torque: 0.2
   wakeRadius: 1
+--- !u!114 &6540690249499146576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257897123985996981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ae83adc2966ac4a89fd36888bd4810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleDestroy

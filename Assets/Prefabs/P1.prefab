@@ -171,7 +171,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_Sprite: {fileID: 1725185248330351572, guid: ed547546f54303c438c2d73b9ff5a8f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -200,9 +200,6 @@ MonoBehaviour:
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3
   rotationSpeed: 10
-  Image1: {fileID: 0}
-  Image2: {fileID: 0}
-  toClampTo: {fileID: 0}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,7 +5119,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.3
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -5134,4 +5131,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

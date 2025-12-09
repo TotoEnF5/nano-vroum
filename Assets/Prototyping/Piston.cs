@@ -44,7 +44,7 @@ public class Piston : MonoBehaviour
     void FixedUpdate()
     {
         float evaluatedValue = CurveMove.Evaluate(m_animationTime - offset - windup);
-        m_animationTime = m_animationTime + Time.deltaTime * speed * GamestateManager.Instance.GlobalTimeIncrement;
+        m_animationTime = m_animationTime + Time.deltaTime * speed * GamestateManager.Instance.GlobalTime;
         PistonTige.transform.localScale = Vector3.Lerp(m_startScale, m_startScale + new Vector3(1,0,0) * PistonSize, evaluatedValue);
         Head.transform.position = Vector3.Lerp(m_startPosition, m_destinationPosition, evaluatedValue);
         if(evaluatedValue >= 0.6f + offset + windup)

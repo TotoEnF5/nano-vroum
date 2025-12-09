@@ -34,7 +34,7 @@ public class RockSpawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        t += Time.deltaTime * GamestateManager.Instance.GlobalTimeIncrement;
+        t += Time.deltaTime * GamestateManager.Instance.GlobalTime;
         if (!m_triggeredOnce && TriggerWhenOnCamera)
         {
             Vector3 viewPos = MainCamera.WorldToViewportPoint(transform.position);

@@ -53,6 +53,7 @@ public class GamestateManager : MonoBehaviour
     
     private void Update()
     {
+
         if (_pauseAction.triggered)
         {
             Scene pauseScene = SceneManager.GetSceneByName("MenuPause");
