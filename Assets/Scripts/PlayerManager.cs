@@ -24,6 +24,7 @@ public class PlayerManager : MonoBehaviour
             {
                 players[i].GetComponent<SpriteRenderer>().color = colors[i];
             }
+            players[1].gameObject.transform.position += Vector3.up * 5;
             isInitDone = true;
             SetPlayerTurn(activePlayerIndex);
         }
