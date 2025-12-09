@@ -111,6 +111,28 @@ public class GamestateManager : MonoBehaviour
             
             cameraScript.ResetState();
             baudroie.ResetState();
+
+            GameObject[] triggers = GameObject.FindGameObjectsWithTag("Trigger");
+            foreach (GameObject trigger in triggers)
+            {
+                Trigger t = trigger.GetComponent<Trigger>();
+                if (t != null)
+                {
+                    t.ResetState();
+                }
+
+                BaudroieTrigger bt = trigger.GetComponent<BaudroieTrigger>();
+                if (bt != null)
+                {
+                    bt.ResetState();
+                }
+                
+                VisibilityTrigger vt = trigger.GetComponent<VisibilityTrigger>();
+                if (vt != null)
+                {
+                    vt.ResetState();
+                }
+            }
             
             Color color = image.color;
             color.a = 0f;

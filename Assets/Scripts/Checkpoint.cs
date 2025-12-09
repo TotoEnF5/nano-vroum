@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    public bool showInGame = false;
+    
     private bool _triggered = false;
+    
+    private void Awake()
+    {
+        GetComponent<Renderer>().enabled = showInGame;
+    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {

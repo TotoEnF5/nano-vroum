@@ -39,4 +39,9 @@ public class BaudroieTrigger : MonoBehaviour
 
         _triggered = oneShot;
     }
+
+    public void ResetState()
+    {
+        _triggered = false;
+    }
 }

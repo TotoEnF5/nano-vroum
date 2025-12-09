@@ -51,4 +51,9 @@ public class Trigger : MonoBehaviour
     {
         GetComponent<Renderer>().enabled = show;
     }
+
+    public void ResetState()
+    {
+        hasDoneOnce = false;
+    }
 }
