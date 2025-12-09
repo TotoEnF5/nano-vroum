@@ -23,8 +23,8 @@ public class PlayerManager : MonoBehaviour
             for (int i = 0; i < players.Count; i++)
             {
                 players[i].GetComponent<SpriteRenderer>().color = colors[i];
-                players[i].GetComponent<Cursors>().SetClamp(i);
             }
+            players[1].gameObject.transform.position += Vector3.up * 5;
             isInitDone = true;
             SetPlayerTurn(activePlayerIndex);
         }
