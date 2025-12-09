@@ -21,7 +21,7 @@ public class MainButtonHandler : MonoBehaviour
 
     private void OnPlay()
     {
-        SceneManager.LoadScene("Levle");
+        SceneManager.LoadScene("Level");
     }
     
     private void OnSettings()
