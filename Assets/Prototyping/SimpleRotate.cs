@@ -20,7 +20,7 @@ public class SimpleRotate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        m_rotationTime = m_rotationTime + Time.deltaTime * speed;
+        m_rotationTime = m_rotationTime + Time.deltaTime * speed * GamestateManager.Instance.GlobalTime;
         
         transform.eulerAngles = Vector3.Lerp(startingRotation, startingRotation + new Vector3(0, 0, AngleIncrement), CurveRotate.Evaluate(m_rotationTime));
         if (m_rotationTime >= 1)

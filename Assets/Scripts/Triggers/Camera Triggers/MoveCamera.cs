@@ -7,9 +7,11 @@ public class MoveCamera : MonoBehaviour
     {
         public Vector3 InitPos;
         public float InitSize;
-        public Vector3 Goal;
-        public float Size;
+        public Vector3 GoalPos;
+        public float GoalSize;
         public float Time;
+        public float Elapsed;
+        public bool WasTweening;
     }
     
     /**
@@ -26,17 +28,23 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
-    private Vector3 _initPos;
-    private float _initSize;
     private Tween _movementTween, _sizeTween;
     private CameraState _lastState, _registeredState;
-    private float _movementElapsed, _sizeElapsed;
 
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-        _initPos = transform.position;
-        _initSize = _camera.orthographicSize;
+        _lastState.InitPos = transform.position;
+        _lastState.InitSize = _camera.orthographicSize;
+        _lastState.Time = 0f;
+        _lastState.Elapsed = 0f;
+        _lastState.WasTweening = false;
+        
+        _registeredState.InitPos = transform.position;
+        _registeredState.InitSize = _camera.orthographicSize;
+        _registeredState.Time = 0f;
+        _registeredState.Elapsed = 0f;
+        _registeredState.WasTweening = false;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
@@ -89,9 +97,11 @@ public class MoveCamera : MonoBehaviour
 
         _lastState.InitPos = transform.position;
         _lastState.InitSize = _camera.orthographicSize;
-        _lastState.Goal = goal;
-        _lastState.Size = newSize;
+        _lastState.GoalPos = goal;
+        _lastState.GoalSize = newSize;
         _lastState.Time = time;
+        _lastState.Elapsed = 0f;
+        _lastState.WasTweening = true;
         
         // Allez hop tweenez moi ça
         _movementTween = transform.DOMove(goal, time).SetEase(ease);
@@ -100,38 +110,36 @@ public class MoveCamera : MonoBehaviour
 
     public void RegisterState()
     {
-        _registeredState = _lastState;
+        _registeredState.WasTweening = _lastState.WasTweening;
+        _registeredState.InitPos = _lastState.InitPos;
+        _registeredState.InitSize = _lastState.InitSize;
+        _registeredState.GoalPos = _lastState.GoalPos;
+        _registeredState.GoalSize = _lastState.GoalSize;
+        _registeredState.Time = _lastState.Time;
 
         if (_movementTween != null)
         {
-            _movementElapsed = _movementTween.Elapsed();
-        }
-
-        if (_sizeTween != null)
-        {
-            _sizeElapsed = _sizeTween.Elapsed();
+            _registeredState.Elapsed = _movementTween.Elapsed();
         }
     }
 
     public void ResetState()
     {
-        if (_movementTween == null && _sizeTween == null)
-        {
-            transform.position = _initPos;
-            _camera.orthographicSize = _initSize;
-            return;
-        }
-        
+        _movementTween?.Pause();
         _movementTween?.Kill();
+        _sizeTween?.Pause();
         _sizeTween?.Kill();
 
         transform.position = _registeredState.InitPos;
         _camera.orthographicSize = _registeredState.InitSize;
 
-        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time).SetEase(Ease.Linear);
-        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.Size, _registeredState.Time);
-        
-        _movementTween.Goto(_movementElapsed, true);
-        _sizeTween.Goto(_sizeElapsed, true);
+        if (_registeredState.WasTweening)
+        {
+            _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
+            _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.GoalSize, _registeredState.Time);
+            
+            _movementTween.Goto(_registeredState.Elapsed, true);
+            _sizeTween.Goto(_registeredState.Elapsed, true);
+        }
     }
 }

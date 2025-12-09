@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RockSpawner : MonoBehaviour
 {
-    public GameObject RockPrefab;
+    public List<GameObject> RockPrefabs;
 
     public float SpawnOffset = 0;
     public float RockSpawnTimer = 3;
@@ -33,7 +34,7 @@ public class RockSpawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        t += Time.deltaTime;
+        t += Time.deltaTime * GamestateManager.Instance.GlobalTime;
         if (!m_triggeredOnce && TriggerWhenOnCamera)
         {
             Vector3 viewPos = MainCamera.WorldToViewportPoint(transform.position);
@@ -58,7 +59,7 @@ public class RockSpawner : MonoBehaviour
     public void SpawnRock()
     {
         m_triggeredOnce = true;
-        GameObject Rock = GameObject.Instantiate(RockPrefab, transform);
+        GameObject Rock = GameObject.Instantiate(RockPrefabs[Random.Range(0,RockPrefabs.Count)], transform);
         Rock.transform.localScale = Vector3.one * UnityEngine.Random.Range(Mathf.Min(RockScaleMin, RockScaleMax), Mathf.Max(RockScaleMax, RockScaleMin));
         if (ApplyForce)
         {
