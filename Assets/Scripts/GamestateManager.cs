@@ -60,7 +60,25 @@ public class GamestateManager : MonoBehaviour
     
     private void Update()
     {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            Time.timeScale = 2;
+        }
+        if (Input.GetKeyDown(KeyCode.KeypadMinus))
+        {
+            Time.timeScale = 0.5f;
 
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad0))
+        {
+            Time.timeScale = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Time.timeScale = 1;
+        }
+#endif
         if (_pauseAction.triggered)
         {
             Scene pauseScene = SceneManager.GetSceneByName("MenuPause");

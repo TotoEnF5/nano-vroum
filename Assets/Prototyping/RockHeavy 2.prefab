@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.2
+  torque: 0.6
   wakeRadius: 1
 --- !u!114 &6540690249499146576
 MonoBehaviour:
