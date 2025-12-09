@@ -3525,7 +3525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!114 &152515194
 MonoBehaviour:
@@ -5864,7 +5864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightTrigger
   showInGame: 0
   newLightColor: {r: 0.45238516, g: 0.8018868, b: 0.4274208, a: 1}
-  newLightValue: 0.9
+  newLightValue: 0.7
   triggerDuration: 2
   GlobalLight: {fileID: 455913649}
 --- !u!50 &313577512
@@ -7548,7 +7548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!60 &433963949
 PolygonCollider2D:
@@ -13343,7 +13343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -15817,7 +15817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!114 &854068048
 MonoBehaviour:
@@ -17169,7 +17169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!60 &940244229
 PolygonCollider2D:
@@ -20119,7 +20119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -23179,7 +23179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 22
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -23664,7 +23664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -25492,7 +25492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -27667,7 +27667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!60 &1484159545
 PolygonCollider2D:
@@ -32584,7 +32584,7 @@ PrefabInstance:
       objectReference: {fileID: 103935849}
     - target: {fileID: 7470695997178905625, guid: 978792d2f191f22f3b235e5cd2ec6e36, type: 3}
       propertyPath: time
-      value: 45
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 7470695997178905625, guid: 978792d2f191f22f3b235e5cd2ec6e36, type: 3}
       propertyPath: cameraScript
@@ -37700,7 +37700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: 0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!114 &1916078592
 MonoBehaviour:
@@ -37907,7 +37907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
@@ -40845,8 +40845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightTrigger
   showInGame: 0
-  newLightColor: {r: 0.5992963, g: 0.8301887, b: 0.58348167, a: 1}
-  newLightValue: 0.9
+  newLightColor: {r: 0.45288953, g: 0.7924528, b: 0.42986828, a: 1}
+  newLightValue: 0.8
   triggerDuration: 2
   GlobalLight: {fileID: 455913649}
 --- !u!50 &1988902246
@@ -41423,7 +41423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTorque
   ActivateWhenCloseToCamera: 0
-  torque: -0.1
+  torque: 0.01
   wakeRadius: 1
 --- !u!114 &2001493081
 MonoBehaviour:
