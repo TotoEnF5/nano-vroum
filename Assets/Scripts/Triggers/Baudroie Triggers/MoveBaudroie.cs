@@ -28,6 +28,12 @@ public class MoveBaudroie : MonoBehaviour
         _lastState.Time = 0f;
         _lastState.Elapsed = 0f;
         _lastState.WasTweening = false;
+        
+        _registeredState.InitPos = transform.position;
+        _registeredState.GoalPos = transform.position;
+        _registeredState.Time = 0f;
+        _registeredState.Elapsed = 0f;
+        _registeredState.WasTweening = false;
     }
     
     public void StartMovement(Transform goal, float time, Ease ease)

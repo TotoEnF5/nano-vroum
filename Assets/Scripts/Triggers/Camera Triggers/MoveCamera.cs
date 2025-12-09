@@ -28,11 +28,8 @@ public class MoveCamera : MonoBehaviour
     }
 
     private Camera _camera;
-    private Vector3 _initPos;
-    private float _initSize;
     private Tween _movementTween, _sizeTween;
     private CameraState _lastState, _registeredState;
-    private float _movementElapsed, _sizeElapsed;
 
     private void Awake()
     {
@@ -42,6 +39,12 @@ public class MoveCamera : MonoBehaviour
         _lastState.Time = 0f;
         _lastState.Elapsed = 0f;
         _lastState.WasTweening = false;
+        
+        _registeredState.InitPos = transform.position;
+        _registeredState.InitSize = _camera.orthographicSize;
+        _registeredState.Time = 0f;
+        _registeredState.Elapsed = 0f;
+        _registeredState.WasTweening = false;
     }
 
     public void StartMovement(Transform goal, CameraDestination cameraDestination, float newSize, float time, Ease ease, bool matchX, bool matchY)
@@ -107,6 +110,9 @@ public class MoveCamera : MonoBehaviour
 
     public void RegisterState()
     {
+        // zojidhugyvcehfbohgiytucf 
+        Debug.Log($"caca register state {_lastState.InitSize} {_lastState.GoalSize}");
+        
         _registeredState.WasTweening = _lastState.WasTweening;
         _registeredState.InitPos = _lastState.InitPos;
         _registeredState.InitSize = _lastState.InitSize;
@@ -122,6 +128,8 @@ public class MoveCamera : MonoBehaviour
 
     public void ResetState()
     {
+        Debug.Log($"caca {_registeredState.InitSize} {_registeredState.GoalSize}");
+        
         _movementTween?.Pause();
         _movementTween?.Kill();
         _sizeTween?.Pause();
@@ -134,6 +142,9 @@ public class MoveCamera : MonoBehaviour
         {
             _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
             _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.GoalSize, _registeredState.Time);
+            
+            _movementTween.Goto(_registeredState.Elapsed);
+            _sizeTween.Goto(_registeredState.Elapsed);
         }
     }
 }
