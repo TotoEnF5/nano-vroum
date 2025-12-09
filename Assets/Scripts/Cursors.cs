@@ -158,6 +158,7 @@ public class Cursors : MonoBehaviour
     }
 }
 
+
     private void ClampPositionToScreen()
     {
         if (mainCamera == null)

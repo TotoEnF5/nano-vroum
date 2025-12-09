@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 4433116695248821095}
   - component: {fileID: 369799303644227577}
   - component: {fileID: 5065267749940895532}
-  - component: {fileID: 8827558666977373516}
+  - component: {fileID: 1021587443226803073}
   m_Layer: 4
   m_Name: P1
   m_TagString: Untagged
@@ -200,6 +200,9 @@ MonoBehaviour:
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3
   rotationSpeed: 10
+  Image1: {fileID: 0}
+  Image2: {fileID: 0}
+  toClampTo: {fileID: 0}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,7 +5108,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.76
---- !u!50 &8827558666977373516
+--- !u!50 &1021587443226803073
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
