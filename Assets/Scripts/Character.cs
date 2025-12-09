@@ -12,7 +12,6 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         CollidePs = GetComponentInChildren<ParticleSystem>();
-        GamestateManager.Instance.character = this.transform;
         _rigidBody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
     }

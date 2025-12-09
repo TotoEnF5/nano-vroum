@@ -6,6 +6,7 @@ public class ScrollingSection : MonoBehaviour
     [SerializeField] private bool showInGame = false;
     [SerializeField] private float time = 2;
     [SerializeField, Min(0)] private float newCameraSize = 5;
+    [SerializeField] private bool oneShot = true;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class ScrollingSection : MonoBehaviour
         source.cameraScript = cameraScript;
         source.showInGame = showInGame;
         source.time = time;
+        source.oneShot = oneShot;
         source.newCameraSize = newCameraSize;
         source.Show(showInGame);
         
