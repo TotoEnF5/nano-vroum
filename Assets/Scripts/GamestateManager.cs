@@ -24,7 +24,9 @@ public class GamestateManager : MonoBehaviour
     public Image image;
     
     private Transform _currentCheckpoint;
+    private Vector3 _initPlayerPos;
     private Gamestate _gamestate = Gamestate.Playing;
+    private bool _doingGameOverAnimation = false;
     
     private InputAction _pauseAction;
 
@@ -40,7 +42,8 @@ public class GamestateManager : MonoBehaviour
         {
             Instance = this;
         }
-        
+
+        _initPlayerPos = character.position;
         _pauseAction = InputSystem.actions.FindAction("Pause");
     }
     
@@ -103,6 +106,12 @@ public class GamestateManager : MonoBehaviour
 
     private void DoGameOverAnimation()
     {
+        if (_doingGameOverAnimation)
+        {
+            return;
+        }
+        
+        _doingGameOverAnimation = true;
         DOTween.timeScale = 1f;
         
         DOTween.To((x) =>
@@ -110,10 +119,20 @@ public class GamestateManager : MonoBehaviour
             Color color = image.color;
             color.a = x;
             image.color = color;
+            Debug.LogError("bbb");
         }, image.color.a, 1f, 2f)
         .OnComplete(() => {
-            character.position = _currentCheckpoint.position;
+            Debug.LogError(_currentCheckpoint);
+            if (_currentCheckpoint != null)
+            {
+                character.position = _currentCheckpoint.position;
+            }
+            else
+            {
+                character.position = _initPlayerPos;
+            }
             
+            Debug.LogError("Resetting state");
             cameraScript.ResetState();
             baudroie.ResetState();
 
@@ -138,6 +157,9 @@ public class GamestateManager : MonoBehaviour
                     vt.ResetState();
                 }
             }
+            Debug.LogError("Reset state");
+
+            _doingGameOverAnimation = false;
             
             Color color = image.color;
             color.a = 0f;
