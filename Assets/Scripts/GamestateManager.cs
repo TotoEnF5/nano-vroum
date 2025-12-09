@@ -22,6 +22,7 @@ public class GamestateManager : MonoBehaviour
     public MoveCamera cameraScript;
     public MoveBaudroie baudroie;
     public Image image;
+    public StartGameScript startGameScript;
     
     private Transform _currentCheckpoint;
     private Vector3 _initPlayerPos;
@@ -114,6 +115,8 @@ public class GamestateManager : MonoBehaviour
         {
             return;
         }
+        
+        startGameScript.BaudroieTrigger.gameObject.SetActive(false);
         
         _doingGameOverAnimation = true;
         DOTween.timeScale = 1f;

@@ -6,8 +6,10 @@ public class MoveBaudroie : MonoBehaviour
     private struct BaudroieState
     {
         public Vector3 InitPos;
-        public Vector3 Goal;
+        public Vector3 GoalPos;
         public float Time;
+        public float Elapsed;
+        public bool WasTweening;
     }
 
     public enum BaudroieDestination
@@ -16,14 +18,16 @@ public class MoveBaudroie : MonoBehaviour
         Custom,
     }
 
-    private Vector3 _initPos;
     private BaudroieState _lastState, _registeredState;
     private Tween _movementTween;
-    private float _movementElapsed;
 
     private void Awake()
     {
-        _initPos = transform.position;
+        _lastState.InitPos = transform.position;
+        _lastState.GoalPos = transform.position;
+        _lastState.Time = 0f;
+        _lastState.Elapsed = 0f;
+        _lastState.WasTweening = false;
     }
     
     public void StartMovement(Transform goal, float time, Ease ease)
@@ -33,38 +37,48 @@ public class MoveBaudroie : MonoBehaviour
 
     public void StartMovement(Vector3 goal, float time, Ease ease)
     {
+        Debug.LogError("movement started");
         goal.z = transform.position.z;
 
         _lastState.InitPos = transform.position;
-        _lastState.Goal = goal;
+        _lastState.GoalPos = goal;
         _lastState.Time = time;
+        _lastState.Elapsed = 0f;
+        _lastState.WasTweening = true;
         
         _movementTween = transform.DOMove(goal, time).SetEase(ease);
     }
     
     public void RegisterState()
     {
-        _registeredState = _lastState;
+        _registeredState.WasTweening = _lastState.WasTweening;
+        _registeredState.InitPos = _lastState.InitPos;
+        _registeredState.GoalPos = _lastState.GoalPos;
+        _registeredState.Time = _lastState.Time;
+        Debug.LogError(_registeredState.InitPos);
+        Debug.LogError(_registeredState.WasTweening);
 
         if (_movementTween != null)
         {
-            _movementElapsed = _movementTween.Elapsed();
+            _registeredState.Elapsed = _movementTween.Elapsed();
         }
     }
     
     public void ResetState()
     {
-        if (_movementTween == null)
-        {
-            transform.position = _initPos;
-            return;
-        }
-        
+        _movementTween?.Pause();
         _movementTween?.Kill();
+        
+        Debug.LogError(_registeredState.InitPos);
+        Debug.LogError(_registeredState.WasTweening);
 
         transform.position = _registeredState.InitPos;
 
-        _movementTween = transform.DOMove(_registeredState.Goal, _registeredState.Time).SetEase(Ease.Linear);
-        _movementTween.Goto(_movementElapsed, true);
+        if (_registeredState.WasTweening)
+        {
+            Debug.LogError("other movement started");
+            _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
+            _movementTween.Goto(_registeredState.Elapsed);
+        }
     }
 }
