@@ -1,7 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(IA_Cursor))]
 public class Cursors : MonoBehaviour
@@ -32,9 +31,6 @@ public class Cursors : MonoBehaviour
     SpriteRenderer sr;
     private Camera mainCamera;
 
-    public SpriteRenderer Image1;
-    public SpriteRenderer Image2;
-    public SpriteRenderer toClampTo;
     // Cette variable n'est plus utilisée pour la force simple
     private Vector2 targetDestination;
 
@@ -48,12 +44,7 @@ public class Cursors : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         targetRB = target.GetComponent<Rigidbody2D>();
         pm.players.Add(gameObject);
-        Image1 = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
-        Image2 = GameObject.FindGameObjectWithTag("Border2").GetComponent<SpriteRenderer>();
-        toClampTo = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
-        //Center the cursor when spawning
-        // targetDestination n'est plus nécessaire ici
-        //Quelle galère
+
     }
 
     void Update()
@@ -144,6 +135,7 @@ public class Cursors : MonoBehaviour
     private void CheckAndReduceVelocity()
     {
         if (targetRB == null) return;
+
         if (Vector2.Distance(targetRB.position, targetDestination) <= destinationTolerance)
         {
             Vector2 currentVelocity = targetRB.linearVelocity;
@@ -164,39 +156,31 @@ public class Cursors : MonoBehaviour
             ps.enableEmission = false;
         }
     }
-    public void SetClamp(int playerIndex)
-    {
-        if(playerIndex == 0)
-        {
-            toClampTo = Image1;
-
-        }
-        else
-        {
-            toClampTo = Image2;
-        }
-    }
 
     private void ClampPositionToScreen()
     {
-        Vector3 min = new Vector3( toClampTo.transform.position.x - toClampTo.size.x / 2f, toClampTo.transform.position.y - toClampTo.size.y / 2f);
-        Vector3 max = new Vector3(toClampTo.transform.position.x + toClampTo.size.x / 2f, toClampTo.transform.position.y + toClampTo.size.y / 2f);
+        if (mainCamera == null)
+        {
+            return;
+        }
 
- 
+        Vector3 minScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - mainCamera.transform.position.z));
+        Vector3 maxScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - mainCamera.transform.position.z));
 
         Vector3 currentPosition = transform.position;
 
         currentPosition.x = Mathf.Clamp(
             currentPosition.x,
-            min.x,
-            max.x
+            minScreenBounds.x,
+            maxScreenBounds.x
         );
 
         currentPosition.y = Mathf.Clamp(
             currentPosition.y,
-            min.y,
-            max.y
+            minScreenBounds.y,
+            maxScreenBounds.y
         );
+
         transform.position = currentPosition;
     }
 }
