@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 64ffb503e506a664aaacee22f35c92cb
+guid: 5d781ff10cf14ae439b21fb48f9b5992
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4528928235418673895
-    second: zone1_foreground_asset1_v1_0
+      213: -4435260915660739709
+    second: zone1_foreground_asset2_v1_0
+  - first:
+      213: 7272798514269778562
+    second: zone1_foreground_asset2_v1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zone1_foreground_asset1_v1_0
+      name: zone1_foreground_asset2_v1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 4144
-        height: 1080
+        y: 1196
+        width: 5715
+        height: 1433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91d12a2e3c30621c0800000000000000
-      internalID: -4528928235418673895
+      spriteID: 38b2edb32b9c272c0800000000000000
+      internalID: -4435260915660739709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone1_foreground_asset2_v1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 5715
+        height: 1556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282f90e37bb2ee460800000000000000
+      internalID: 7272798514269778562
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zone1_foreground_asset1_v1_0: -4528928235418673895
+      zone1_foreground_asset2_v1_0: -4435260915660739709
+      zone1_foreground_asset2_v1_1: 7272798514269778562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
