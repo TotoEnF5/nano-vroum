@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: d380b576ddcd76147b0cdf00c6b37a82
+guid: 3bfeb87d448ff8c418a7587d55893a58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4632379207150912609
-    second: BLOBLUMIERE_0
-  - first:
-      213: 8405942159440298353
-    second: BLOBLUMIERE_1
-  - first:
-      213: -6955619898765702952
-    second: BLOBLUMIERE_2
-  - first:
-      213: -968649016616911395
-    second: BLOBLUMIERE_3
+      213: -4528928235418673895
+    second: zone1_foreground_asset1_v1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BLOBLUMIERE_0
+      name: zone1_foreground_asset1_v1_0
       rect:
         serializedVersion: 2
-        x: 523
-        y: 1451
-        width: 194
-        height: 296
+        x: 0
+        y: 0
+        width: 4144
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 164c2237854894040800000000000000
-      internalID: 4632379207150912609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BLOBLUMIERE_1
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 1702
-        width: 45
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1714bef7bd7e7a470800000000000000
-      internalID: 8405942159440298353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BLOBLUMIERE_2
-      rect:
-        serializedVersion: 2
-        x: 1462
-        y: 1642
-        width: 90
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d88e65fd8ca87f90800000000000000
-      internalID: -6955619898765702952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BLOBLUMIERE_3
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 240
-        width: 1766
-        height: 1440
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddd748cf9daae82f0800000000000000
-      internalID: -968649016616911395
+      spriteID: 91d12a2e3c30621c0800000000000000
+      internalID: -4528928235418673895
       vertices: []
       indices: 
       edges: []
@@ -223,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BLOBLUMIERE_0: 4632379207150912609
-      BLOBLUMIERE_1: 8405942159440298353
-      BLOBLUMIERE_2: -6955619898765702952
-      BLOBLUMIERE_3: -968649016616911395
+      zone1_foreground_asset1_v1_0: -4528928235418673895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

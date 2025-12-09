@@ -77,8 +77,7 @@ public class Piston : MonoBehaviour
     }
 
     public void SetParticles()
-    {
-        print("SETTING PARTICLES : " + particlesDisabled);
+    { 
         foreach(ParticleSystem ps in bubbles)
         {
             EmissionModule emission = ps.emission;
