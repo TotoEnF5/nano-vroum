@@ -79,8 +79,11 @@ public class GamestateManager : MonoBehaviour
         {
             case Gamestate.Playing:
             case Gamestate.Paused:
-            case Gamestate.Win:
                 throw new NotImplementedException();
+            
+            case Gamestate.Win:
+                DoWinAnimation();
+                break;
             
            case Gamestate.GameOver:
                DoGameOverAnimation();
@@ -137,6 +140,20 @@ public class GamestateManager : MonoBehaviour
             Color color = image.color;
             color.a = 0f;
             image.color = color;
+        });
+    }
+
+    public void DoWinAnimation()
+    {
+        DOTween.To((x) =>
+        {
+            Color color = image.color;
+            color.a = x;
+            image.color = color;
+        }, image.color.a, 1f, 2f)
+        .OnComplete(() =>
+        {
+            SceneManager.LoadScene("MenuMain");
         });
     }
 }
