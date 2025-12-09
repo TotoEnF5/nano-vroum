@@ -81,8 +81,11 @@ public class GamestateManager : MonoBehaviour
         {
             case Gamestate.Playing:
             case Gamestate.Paused:
-            case Gamestate.Win:
                 throw new NotImplementedException();
+            
+            case Gamestate.Win:
+                DoWinAnimation();
+                break;
             
            case Gamestate.GameOver:
                DoGameOverAnimation();
@@ -113,10 +116,46 @@ public class GamestateManager : MonoBehaviour
             
             cameraScript.ResetState();
             baudroie.ResetState();
+
+            GameObject[] triggers = GameObject.FindGameObjectsWithTag("Trigger");
+            foreach (GameObject trigger in triggers)
+            {
+                Trigger t = trigger.GetComponent<Trigger>();
+                if (t != null)
+                {
+                    t.ResetState();
+                }
+
+                BaudroieTrigger bt = trigger.GetComponent<BaudroieTrigger>();
+                if (bt != null)
+                {
+                    bt.ResetState();
+                }
+                
+                VisibilityTrigger vt = trigger.GetComponent<VisibilityTrigger>();
+                if (vt != null)
+                {
+                    vt.ResetState();
+                }
+            }
             
             Color color = image.color;
             color.a = 0f;
             image.color = color;
+        });
+    }
+
+    public void DoWinAnimation()
+    {
+        DOTween.To((x) =>
+        {
+            Color color = image.color;
+            color.a = x;
+            image.color = color;
+        }, image.color.a, 1f, 2f)
+        .OnComplete(() =>
+        {
+            SceneManager.LoadScene("MenuMain");
         });
     }
 }

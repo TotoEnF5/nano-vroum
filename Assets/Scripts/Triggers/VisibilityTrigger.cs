@@ -9,6 +9,12 @@ public class VisibilityTrigger : MonoBehaviour
     public bool oneShot = true;
 
     private bool _spawned = false;
+    public bool showInGame = false;
+    
+    private void Awake()
+    {
+        GetComponent<Renderer>().enabled = showInGame;
+    }
 
     private void OnBecameVisible()
     {
@@ -19,5 +25,10 @@ public class VisibilityTrigger : MonoBehaviour
         
         Instantiate(prefabToInstantiate, position, rotation);
         _spawned = true && oneShot;
+    }
+
+    public void ResetState()
+    {
+        _spawned = false;
     }
 }
