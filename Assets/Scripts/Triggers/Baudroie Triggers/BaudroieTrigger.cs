@@ -23,7 +23,6 @@ public class BaudroieTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Registering State");
         if (!doSomething || _triggered || !other.CompareTag("Baudroie"))
         {
             return;

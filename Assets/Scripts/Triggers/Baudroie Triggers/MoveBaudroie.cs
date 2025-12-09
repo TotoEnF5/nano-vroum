@@ -60,8 +60,6 @@ public class MoveBaudroie : MonoBehaviour
         _registeredState.InitPos = _lastState.InitPos;
         _registeredState.GoalPos = _lastState.GoalPos;
         _registeredState.Time = _lastState.Time;
-        Debug.LogError(_registeredState.InitPos);
-        Debug.LogError(_registeredState.WasTweening);
 
         if (_movementTween != null)
         {
@@ -73,9 +71,6 @@ public class MoveBaudroie : MonoBehaviour
     {
         _movementTween?.Pause();
         _movementTween?.Kill();
-        
-        Debug.LogError(_registeredState.InitPos);
-        Debug.LogError(_registeredState.WasTweening);
 
         transform.position = _registeredState.InitPos;
 

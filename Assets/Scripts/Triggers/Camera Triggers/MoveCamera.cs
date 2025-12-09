@@ -125,8 +125,6 @@ public class MoveCamera : MonoBehaviour
 
     public void ResetState()
     {
-        Debug.Log($"caca {_registeredState.InitSize} {_registeredState.GoalSize}");
-        
         _movementTween?.Pause();
         _movementTween?.Kill();
         _sizeTween?.Pause();
