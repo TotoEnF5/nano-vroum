@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{26bbb03c-e1c0-49e2-8dda-5dcd9d7dc974}">
+		<property name="assetPath">
+			<value>Dash07.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.96562358276643989</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fabfa455-d82c-4b1f-a4de-7d0979cec69b}</destination>
+		</relationship>
+	</object>
+</objects>
