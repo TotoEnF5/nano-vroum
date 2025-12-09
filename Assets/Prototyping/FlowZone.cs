@@ -4,6 +4,8 @@ using UnityEngine;
 public class FlowZone : MonoBehaviour
 {
     private Rigidbody2D player;
+    [SerializeField]
+    private float acceleration;
 
     [SerializeField]
     private float maxSpeed;
@@ -18,7 +20,7 @@ public class FlowZone : MonoBehaviour
     {
         if (player != null && player.linearVelocity.magnitude < maxSpeed)
         {
-            player.AddForce(Vector2.up, ForceMode2D.Force);
+            player.AddForce(Vector2.up * acceleration, ForceMode2D.Force);
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
