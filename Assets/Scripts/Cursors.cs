@@ -1,7 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(IA_Cursor))]
 public class Cursors : MonoBehaviour
@@ -136,6 +135,7 @@ public class Cursors : MonoBehaviour
     private void CheckAndReduceVelocity()
     {
         if (targetRB == null) return;
+
         if (Vector2.Distance(targetRB.position, targetDestination) <= destinationTolerance)
         {
             Vector2 currentVelocity = targetRB.linearVelocity;
@@ -155,5 +155,33 @@ public class Cursors : MonoBehaviour
         {
             ps.enableEmission = false;
         }
+    }
+}
+
+    private void ClampPositionToScreen()
+    {
+        if (mainCamera == null)
+        {
+            return;
+        }
+
+        Vector3 minScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - mainCamera.transform.position.z));
+        Vector3 maxScreenBounds = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - mainCamera.transform.position.z));
+
+        Vector3 currentPosition = transform.position;
+
+        currentPosition.x = Mathf.Clamp(
+            currentPosition.x,
+            minScreenBounds.x,
+            maxScreenBounds.x
+        );
+
+        currentPosition.y = Mathf.Clamp(
+            currentPosition.y,
+            minScreenBounds.y,
+            maxScreenBounds.y
+        );
+
+        transform.position = currentPosition;
     }
 }
