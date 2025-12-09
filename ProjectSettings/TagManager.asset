@@ -15,6 +15,7 @@ TagManager:
   - killer
   - LineRotator
   - Trigger
+  - Rocks
   layers:
   - Default
   - TransparentFX

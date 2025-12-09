@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{ac10b734-a153-4042-b090-bff2e80faac0}">
-		<property name="note" />
 		<property name="color">
 			<value>Purple</value>
 		</property>
@@ -44,7 +43,6 @@
 	<object class="MasterTrack" id="{a874c7fa-c86f-4f46-a69b-7d6124e0ac3e}">
 		<relationship name="modules">
 			<destination>{3a7edeb3-8f32-41a3-a0d9-5d95a4ea4c11}</destination>
-			<destination>{fee895ff-fbfb-4e5a-944f-a3a542e8f865}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{3096d2cd-718e-44c2-be78-35b6ba9b4554}</destination>
@@ -66,10 +64,12 @@
 	<object class="Timeline" id="{52b5dcd6-e8d7-4772-9e76-84c7bba09bbe}">
 		<relationship name="modules">
 			<destination>{3a7edeb3-8f32-41a3-a0d9-5d95a4ea4c11}</destination>
-			<destination>{fee895ff-fbfb-4e5a-944f-a3a542e8f865}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{3096d2cd-718e-44c2-be78-35b6ba9b4554}">
+		<property name="volume">
+			<value>6.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{10f3c3ef-79bf-4c52-8095-c7251484e395}</destination>
 		</relationship>
@@ -86,14 +86,6 @@
 		</property>
 		<relationship name="event">
 			<destination>{d4e1efc3-0115-434e-b00b-e7b851988d7c}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{fee895ff-fbfb-4e5a-944f-a3a542e8f865}">
-		<property name="length">
-			<value>3.9643764172335603</value>
-		</property>
-		<relationship name="event">
-			<destination>{3a464695-b789-45a5-a49b-bb69a824ee78}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{001795cc-aaee-4139-bba2-5759d47bc2c0}">

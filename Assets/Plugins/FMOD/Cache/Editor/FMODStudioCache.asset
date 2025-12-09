@@ -69,11 +69,38 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639008722966062608
+  lastModified: 639008899297527418
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-7329877968501812750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rocks_Destroyed
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Rocks_Destroyed
+  Guid:
+    Data1: 1720744583
+    Data2: 1293139155
+    Data3: 2122617246
+    Data4: 951674442
+  Banks:
+  - {fileID: -2867559466223793838}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2446
 --- !u!114 &-6849745025173900619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,10 +318,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639008722966122447
+  lastModified: 639008904474514038
   FileSizes:
   - Name: Desktop
-    Value: 917920
+    Value: 867040
   Exists: 1
 --- !u!114 &-2500012515270722289
 MonoBehaviour:
@@ -432,10 +459,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639008722966072580
+  lastModified: 639008904474012304
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 656064
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -467,13 +494,16 @@ MonoBehaviour:
   - {fileID: 3826542776773328074}
   - {fileID: 7231423487189970123}
   - {fileID: 6493940578323759668}
+  - {fileID: 7281989179504842602}
+  - {fileID: 4970824269819456858}
+  - {fileID: -7329877968501812750}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7439083517803766750}
   StringsBanks:
   - {fileID: 490254035159929904}
   cacheVersion: 131857
-  cacheTime: 639008722966122447
+  cacheTime: 639008904474514038
   SerializableEventsDict:
   - key: event:/Ambiance
     index: 0
@@ -495,6 +525,8 @@ MonoBehaviour:
     index: 8
   - key: event:/UI_Confirm
     index: 9
+  - key: event:/OST
+    index: 10
 --- !u!114 &490254035159929904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,10 +542,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639008722966062608
+  lastModified: 639008899297542508
   FileSizes:
   - Name: Desktop
-    Value: 1360
+    Value: 1500
   Exists: 1
 --- !u!114 &1276118731586195637
 MonoBehaviour:
@@ -584,7 +616,7 @@ MonoBehaviour:
   - {fileID: 8697782776099743548}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -604,7 +636,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639008722966122447
+  lastModified: 639008879358812441
   FileSizes:
   - Name: Desktop
     Value: 20288
@@ -710,6 +742,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 875
+--- !u!114 &4970824269819456858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rocks_Damaged
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Rocks_Damaged
+  Guid:
+    Data1: 439552529
+    Data2: 1096715373
+    Data3: -135407981
+    Data4: -2100918388
+  Banks:
+  - {fileID: -2867559466223793838}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2446
 --- !u!114 &5227622653177798261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +890,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 204
+--- !u!114 &7281989179504842602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST
+  Guid:
+    Data1: 2062144698
+    Data2: 1280114240
+    Data3: -2077865041
+    Data4: 461687187
+  Banks:
+  - {fileID: -9958385741605245}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 52213
 --- !u!114 &7721977546036634427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,10 +979,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639008722966052629
+  lastModified: 639008901064597367
   FileSizes:
   - Name: Desktop
-    Value: 1613856
+    Value: 1613984
   Exists: 1
 --- !u!114 &9069744094561031164
 MonoBehaviour:
