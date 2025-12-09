@@ -11,6 +11,7 @@ public enum Gamestate
     Playing,
     Paused,
     GameOver,
+    Win,
 }
 
 public class GamestateManager : MonoBehaviour
@@ -18,7 +19,7 @@ public class GamestateManager : MonoBehaviour
     public static GamestateManager Instance { get; private set; }
     
     public Transform character;
-    public MoveCamera camera;
+    public MoveCamera cameraScript;
     public MoveBaudroie baudroie;
     public Image image;
     
@@ -59,11 +60,16 @@ public class GamestateManager : MonoBehaviour
         }
     }
 
+    public void IncreaseSpeed()
+    {
+        DOTween.timeScale *= 1.2f;
+    }
+
     public void SetCheckpoint(Transform checkpoint)
     {
         _currentCheckpoint = checkpoint;
         
-        camera.RegisterState();
+        cameraScript.RegisterState();
         baudroie.RegisterState();
     }
 
@@ -75,6 +81,7 @@ public class GamestateManager : MonoBehaviour
         {
             case Gamestate.Playing:
             case Gamestate.Paused:
+            case Gamestate.Win:
                 throw new NotImplementedException();
             
            case Gamestate.GameOver:
@@ -93,6 +100,8 @@ public class GamestateManager : MonoBehaviour
 
     private void DoGameOverAnimation()
     {
+        DOTween.timeScale = 1f;
+        
         DOTween.To((x) =>
         {
             Color color = image.color;
@@ -102,7 +111,7 @@ public class GamestateManager : MonoBehaviour
         .OnComplete(() => {
             character.position = _currentCheckpoint.position;
             
-            camera.ResetState();
+            cameraScript.ResetState();
             baudroie.ResetState();
             
             Color color = image.color;

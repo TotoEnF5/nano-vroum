@@ -53,6 +53,7 @@ public class Cursors : MonoBehaviour
         toClampTo = GameObject.FindGameObjectWithTag("Border1").GetComponent<SpriteRenderer>();
         //Center the cursor when spawning
         // targetDestination n'est plus nécessaire ici
+        //Quelle galère
     }
 
     void Update()
