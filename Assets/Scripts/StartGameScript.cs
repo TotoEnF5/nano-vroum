@@ -13,6 +13,7 @@ public class StartGameScript : MonoBehaviour
 
     public GameObject lightPreset1;
     public GameObject lightPreset2;
+    bool triggeredOnce = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,8 +29,13 @@ public class StartGameScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (triggeredOnce)
+        {
+            return;
+        }
         if(collision.tag == "Player")
         {
+            triggeredOnce = true;
             CameraShake.StartShake(3f, 1f);
             collision.gameObject.transform.DOPunchScale(Vector3.one * 1.5f, 1f, 1).SetEase(Ease.OutQuint).onUpdate += () => {
                 collision.gameObject.transform.localScale = Vector3.one;
