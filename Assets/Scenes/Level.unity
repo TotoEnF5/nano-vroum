@@ -16348,7 +16348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7050511572658413780, guid: cf9ed6f49673ab342b3b8afe8721bc1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: 2.58
       objectReference: {fileID: 0}
     - target: {fileID: 7050511572658413780, guid: cf9ed6f49673ab342b3b8afe8721bc1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28040,7 +28040,7 @@ PrefabInstance:
       objectReference: {fileID: 621365416}
     - target: {fileID: 5415881242248901975, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
       propertyPath: GlobalTimeIncrement
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6806919460668263481, guid: 69b225d8b16247d499a00cd95d549f0d, type: 3}
       propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
