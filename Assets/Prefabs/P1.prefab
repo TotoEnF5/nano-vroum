@@ -84,7 +84,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &8303675174989248430
+--- !u!1 &3744903624068472476
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,44 +92,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4770111048552448335}
-  - component: {fileID: 3111145478221990744}
-  - component: {fileID: 7327238672404666819}
-  - component: {fileID: 5561690144297620035}
-  - component: {fileID: 4433116695248821095}
-  - component: {fileID: 369799303644227577}
-  - component: {fileID: 5065267749940895532}
-  - component: {fileID: 1021587443226803073}
+  - component: {fileID: 757928617806080874}
+  - component: {fileID: 6739437130722256028}
   m_Layer: 4
-  m_Name: P1
+  m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4770111048552448335
+--- !u!4 &757928617806080874
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8303675174989248430}
+  m_GameObject: {fileID: 3744903624068472476}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 6108021922734290289}
-  m_Father: {fileID: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4770111048552448335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3111145478221990744
+--- !u!212 &6739437130722256028
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8303675174989248430}
+  m_GameObject: {fileID: 3744903624068472476}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -148,7 +141,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,6 +174,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8303675174989248430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4770111048552448335}
+  - component: {fileID: 7327238672404666819}
+  - component: {fileID: 5561690144297620035}
+  - component: {fileID: 4433116695248821095}
+  - component: {fileID: 369799303644227577}
+  - component: {fileID: 5065267749940895532}
+  - component: {fileID: 1021587443226803073}
+  m_Layer: 4
+  m_Name: P1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4770111048552448335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303675174989248430}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 6108021922734290289}
+  - {fileID: 757928617806080874}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7327238672404666819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +232,11 @@ MonoBehaviour:
   velocityReductionFactor: 0.03
   minSpeedForRotation: 0.3
   rotationSpeed: 10
+  sr: {fileID: 6739437130722256028}
+  dashManager: {fileID: 0}
+  CooldownDash: 0.5
+  inactiveColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  activeColor: {r: 1, g: 0.8798679, b: 0, a: 1}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +283,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7327238672404666819}
         m_TargetAssemblyTypeName: Cursors, Assembly-CSharp
         m_MethodName: PushTargetToCursor
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5036,7 +5073,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 154
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

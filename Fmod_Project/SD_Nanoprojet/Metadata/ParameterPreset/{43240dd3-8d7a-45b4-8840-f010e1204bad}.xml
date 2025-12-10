@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{43240dd3-8d7a-45b4-8840-f010e1204bad}">
+		<property name="name">
+			<value>PoteStreak</value>
+		</property>
+		<relationship name="folder">
+			<destination>{060ae467-1f73-4a69-9340-1bf1e17300cc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{cbe08e0b-e973-4d9e-b166-62b5342666e9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{cbe08e0b-e973-4d9e-b166-62b5342666e9}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

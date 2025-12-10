@@ -20,6 +20,10 @@ public class polygonCulling : MonoBehaviour
         {
             foreach (PolygonCollider2D polygonCollider2D in polygonList)
             {
+                if(polygonCollider2D == null)
+                {
+                    continue;
+                }
                 //print(Vector3.Distance(transform.position, polygonCollider2D.transform.position));
                 if (Vector3.Distance(transform.position, polygonCollider2D.transform.position) > range)
                 {
