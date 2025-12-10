@@ -42,6 +42,11 @@ public class Cursors : MonoBehaviour
 
     public Tween scaleTween;
     public Tween rotateTween;
+
+    public Color inactiveColor;
+    public Color activeColor;
+
+
     private void Start()
     {
         pm = FindFirstObjectByType<PlayerManager>();
@@ -61,6 +66,17 @@ public class Cursors : MonoBehaviour
 
     void Update()
     {
+        
+
+        if(!canAct || GamestateManager.Instance.isDashing)
+        {
+            sr.color = inactiveColor;
+        }
+        else
+        {
+            sr.color = activeColor;
+        }
+
         ps.startColor = sr.color;
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
         ClampPositionToScreen();
@@ -119,7 +135,7 @@ public class Cursors : MonoBehaviour
         {
             return;
         }
-        if (canAct)
+        if (!GamestateManager.Instance.isDashing && canAct)
         {   
 
             Vector2 startPos = targetRB.position;
@@ -156,6 +172,8 @@ public class Cursors : MonoBehaviour
                 .AppendInterval(targetTravelTime * 1.05f)
                 .AppendCallback(CheckAndReduceVelocity)
                 .Play();
+            GamestateManager.Instance.isDashing = true;
+            GamestateManager.Instance.m_currentCooldownDash = 0;
         }
         if(scaleTween != null)
         {

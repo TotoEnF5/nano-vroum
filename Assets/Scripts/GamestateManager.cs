@@ -41,6 +41,12 @@ public class GamestateManager : MonoBehaviour
 
     public Color Color;
     private bool mustRestartGame = false;
+
+
+    public float CooldownDash = 0.5f;
+    public float m_currentCooldownDash = 0f;
+    public bool isDashing = false;
+
     private void Awake()
     {
         Shader.SetGlobalColor("_GlobalColor", Color);
@@ -61,6 +67,14 @@ public class GamestateManager : MonoBehaviour
     
     private void Update()
     {
+        if (isDashing)
+        {
+            m_currentCooldownDash += Time.deltaTime;
+            if(m_currentCooldownDash >= CooldownDash)
+            {
+                isDashing = false;
+            }
+        }
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {

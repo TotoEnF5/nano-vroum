@@ -234,6 +234,9 @@ MonoBehaviour:
   rotationSpeed: 10
   sr: {fileID: 6739437130722256028}
   dashManager: {fileID: 0}
+  CooldownDash: 0.5
+  inactiveColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  activeColor: {r: 1, g: 0.8798679, b: 0, a: 1}
 --- !u!114 &5561690144297620035
 MonoBehaviour:
   m_ObjectHideFlags: 0

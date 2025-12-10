@@ -37,6 +37,9 @@ public class PlayerManager : MonoBehaviour
                 {
                     players[i].GetComponentInChildren<SpriteRenderer>().color = colors[i];
                 }
+
+                players[i].GetComponent<Cursors>().inactiveColor = inactive;
+                players[i].GetComponent<Cursors>().activeColor = colors[i];
             }
             colorSave = colors;
             players[1].gameObject.transform.position += Vector3.up * 5;

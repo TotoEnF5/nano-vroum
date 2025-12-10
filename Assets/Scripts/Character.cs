@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        _rigidBody.linearVelocity = Vector3.zero;
+        //_rigidBody.linearVelocity = Vector3.zero;
         CollidePs.Play();
 
         if(collision.gameObject.CompareTag("killer"))
