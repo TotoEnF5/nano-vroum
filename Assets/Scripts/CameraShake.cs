@@ -4,7 +4,6 @@ public class CameraShake : MonoBehaviour
 {
     public float duration = 0f;
     public float intensity = 0f;
-    public bool resetLocalPosition;
 
     private void Update()
     {
@@ -16,11 +15,6 @@ public class CameraShake : MonoBehaviour
         }
         else
         {
-            if (resetLocalPosition)
-            {
-                transform.localPosition = Vector3.zero;
-            }
-            
             duration = 0f;
         }
     }
