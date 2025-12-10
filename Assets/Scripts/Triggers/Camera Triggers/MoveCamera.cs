@@ -27,21 +27,21 @@ public class MoveCamera : MonoBehaviour
         Custom,         // The camera goes to a user-defined location
     }
 
-    private Camera _camera;
+    public Camera camera;
+    
     private Tween _movementTween, _sizeTween;
     private CameraState _lastState, _registeredState;
 
     private void Awake()
     {
-        _camera = GetComponent<Camera>();
         _lastState.InitPos = transform.position;
-        _lastState.InitSize = _camera.orthographicSize;
+        _lastState.InitSize = camera.orthographicSize;
         _lastState.Time = 0f;
         _lastState.Elapsed = 0f;
         _lastState.WasTweening = false;
         
         _registeredState.InitPos = transform.position;
-        _registeredState.InitSize = _camera.orthographicSize;
+        _registeredState.InitSize = camera.orthographicSize;
         _registeredState.Time = 0f;
         _registeredState.Elapsed = 0f;
         _registeredState.WasTweening = false;
@@ -51,7 +51,7 @@ public class MoveCamera : MonoBehaviour
     {
         // New camera size
         float camHeight = 2 * newSize;
-        float camWidth = camHeight * _camera.aspect;
+        float camWidth = camHeight * camera.aspect;
         
         // New camera coords
         Vector3 destination = goal.position;
@@ -96,7 +96,7 @@ public class MoveCamera : MonoBehaviour
         goal.z = transform.position.z;
 
         _lastState.InitPos = transform.position;
-        _lastState.InitSize = _camera.orthographicSize;
+        _lastState.InitSize = camera.orthographicSize;
         _lastState.GoalPos = goal;
         _lastState.GoalSize = newSize;
         _lastState.Time = time;
@@ -105,7 +105,7 @@ public class MoveCamera : MonoBehaviour
         
         // Allez hop tweenez moi ça
         _movementTween = transform.DOMove(goal, time).SetEase(ease);
-        _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, newSize, time);
+        _sizeTween = DOTween.To(x => camera.orthographicSize = x, camera.orthographicSize, newSize, time);
     }
 
     public void RegisterState()
@@ -131,12 +131,12 @@ public class MoveCamera : MonoBehaviour
         _sizeTween?.Kill();
 
         transform.position = _registeredState.InitPos;
-        _camera.orthographicSize = _registeredState.InitSize;
+        camera.orthographicSize = _registeredState.InitSize;
 
         if (_registeredState.WasTweening)
         {
             _movementTween = transform.DOMove(_registeredState.GoalPos, _registeredState.Time).SetEase(Ease.Linear);
-            _sizeTween = DOTween.To(x => _camera.orthographicSize = x, _camera.orthographicSize, _registeredState.GoalSize, _registeredState.Time);
+            _sizeTween = DOTween.To(x => camera.orthographicSize = x, camera.orthographicSize, _registeredState.GoalSize, _registeredState.Time);
             
             _movementTween.Goto(_registeredState.Elapsed, true);
             _sizeTween.Goto(_registeredState.Elapsed, true);
