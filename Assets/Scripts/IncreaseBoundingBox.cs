@@ -7,7 +7,7 @@ public class IncreaseBoundingBox : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        sr.bounds = new Bounds(Vector3.zero, Vector3.one * 10);
+        sr.bounds = new Bounds(Vector3.zero, Vector3.one * 100000);
     }
 
     // Update is called once per frame

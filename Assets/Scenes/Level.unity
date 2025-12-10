@@ -5975,6 +5975,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.038948298
       objectReference: {fileID: 0}
+    - target: {fileID: 1594731300077620427, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2762359757732415848, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -6058,7 +6062,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8995320647548981661, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1488376360}
   m_SourcePrefab: {fileID: 100100000, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
 --- !u!1001 &322572496
 PrefabInstance:
@@ -30302,6 +30309,23 @@ PolygonCollider2D:
       - {x: -4.4649997, y: -0.79499996}
       - {x: -4.395, y: -0.765}
   m_UseDelaunayMesh: 1
+--- !u!1 &1488376355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8995320647548981661, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+  m_PrefabInstance: {fileID: 317466553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1488376360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488376355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e433aaeaf00c24098a23b15fccdafe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1504415067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37241,7 +37265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: time
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7976633803268290852, guid: 917947daf86872c64b77aee99245eb9c, type: 3}
       propertyPath: baudroie
