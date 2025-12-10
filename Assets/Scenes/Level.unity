@@ -5975,6 +5975,18 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.038948298
       objectReference: {fileID: 0}
+    - target: {fileID: 626143273672838177, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246293514436901362, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521205272738623632, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1594731300077620427, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -6059,6 +6071,10 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 1389109740}
+    - target: {fileID: 8434850955649511224, guid: a5099725bc2fb564ea47159dba629fd4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
