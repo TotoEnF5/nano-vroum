@@ -78,7 +78,7 @@ public class GamestateManager : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {
-            Time.timeScale = 2;
+            Time.timeScale = 1.5f;
         }
         if (Input.GetKeyDown(KeyCode.KeypadMinus))
         {
