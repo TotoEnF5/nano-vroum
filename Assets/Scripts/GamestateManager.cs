@@ -110,8 +110,8 @@ public class GamestateManager : MonoBehaviour
 
     public void IncreaseSpeed()
     {
-        DOTween.timeScale += (GlobalTimeIncrement*2);
-        GlobalTime += (GlobalTimeIncrement*2);
+        DOTween.timeScale += (GlobalTimeIncrement*3);
+        GlobalTime += (GlobalTimeIncrement*3);
     }
 
     public void SetCheckpoint(Transform checkpoint)
