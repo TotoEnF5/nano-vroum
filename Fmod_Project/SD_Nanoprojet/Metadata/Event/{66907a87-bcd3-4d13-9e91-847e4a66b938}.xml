@@ -53,10 +53,14 @@
 			<destination>{a57f818b-d6ed-4dd8-a36d-21a62992b70b}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{1003bfd0-720a-4a11-ae5f-a33dcee4c7a0}</destination>
+			<destination>{e054c3c4-b278-4d20-b77f-85b9c522a656}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{379bc35e-27e8-425b-a126-b4355878704e}" />
+	<object class="EventAutomatableProperties" id="{379bc35e-27e8-425b-a126-b4355878704e}">
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ad5a2370-28e6-488a-bac5-f25ee6c6980b}" />
 	<object class="Timeline" id="{c4cd5fb1-fea4-4aad-a2c8-2c6fb50db15d}">
 		<relationship name="modules">
@@ -64,6 +68,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ca914613-5647-4b33-85cc-627794c91064}">
+		<property name="volume">
+			<value>3.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{6d1a710a-577d-48f6-9e47-9f2472ec4694}</destination>
 		</relationship>
