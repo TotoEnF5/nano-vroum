@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639008723141282697
+  lastModified: 639009718083816447
   FileSizes:
   - Name: Desktop
-    Value: 1074
+    Value: 1524
   Exists: 1
 --- !u!114 &-7329877968501812750
 MonoBehaviour:
@@ -101,33 +101,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2446
---- !u!114 &-6849745025173900619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Obstacle_Destruction
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Obstacle_Destruction
-  Guid:
-    Data1: 1882370222
-    Data2: 1077289064
-    Data3: -107438674
-    Data4: -1044776659
-  Banks:
-  - {fileID: -2867559466223793838}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6173
 --- !u!114 &-6497520205877385995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,10 +291,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639009578035909960
+  lastModified: 639008952154682815
   FileSizes:
   - Name: Desktop
-    Value: 867040
+    Value: 865856
   Exists: 1
 --- !u!114 &-2500012515270722289
 MonoBehaviour:
@@ -459,10 +432,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639009578035879420
+  lastModified: 639008952154582495
   FileSizes:
   - Name: Desktop
-    Value: 656064
+    Value: 699232
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -490,7 +463,6 @@ MonoBehaviour:
   - {fileID: -8003283687883908176}
   - {fileID: -8250638966469269800}
   - {fileID: 7046501310646975142}
-  - {fileID: -6849745025173900619}
   - {fileID: 3826542776773328074}
   - {fileID: 7231423487189970123}
   - {fileID: 6493940578323759668}
@@ -503,7 +475,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 490254035159929904}
   cacheVersion: 131857
-  cacheTime: 639009578035909960
+  cacheTime: 639008952154682815
   SerializableEventsDict:
   - key: event:/Ambiance
     index: 0
@@ -517,20 +489,18 @@ MonoBehaviour:
     index: 4
   - key: event:/Character_Bounce
     index: 5
-  - key: event:/Obstacle_Destruction
-    index: 6
   - key: event:/UI_Select
-    index: 7
+    index: 6
   - key: event:/UI_Back
-    index: 8
+    index: 7
   - key: event:/UI_Confirm
-    index: 9
+    index: 8
   - key: event:/OST
-    index: 10
+    index: 9
   - key: event:/Rocks_Damaged
-    index: 11
+    index: 10
   - key: event:/Rocks_Destroyed
-    index: 12
+    index: 11
 --- !u!114 &490254035159929904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,10 +516,10 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639009578035869402
+  lastModified: 639008952154582495
   FileSizes:
   - Name: Desktop
-    Value: 1500
+    Value: 1558
   Exists: 1
 --- !u!114 &1276118731586195637
 MonoBehaviour:
@@ -640,7 +610,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639008723141337869
+  lastModified: 639008952154682815
   FileSizes:
   - Name: Desktop
     Value: 20288
@@ -983,7 +953,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639009578035859334
+  lastModified: 639008952154582495
   FileSizes:
   - Name: Desktop
     Value: 1613984
