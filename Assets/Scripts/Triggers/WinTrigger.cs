@@ -4,7 +4,7 @@ using UnityEngine;
 public class WinTrigger : MonoBehaviour
 {
     public bool showInGame = false;
-    
+    bool triggeredOnce = false;
     private void Awake()
     {
         GetComponent<Renderer>().enabled = showInGame;
@@ -16,7 +16,10 @@ public class WinTrigger : MonoBehaviour
         {
             return;
         }
-        
-        GamestateManager.Instance.SetGamestate(Gamestate.Win);
+        if (!triggeredOnce)
+        {
+            triggeredOnce = true;
+            GamestateManager.Instance.SetGamestate(Gamestate.Win);
+        }
     }
 }

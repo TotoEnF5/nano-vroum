@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     public Color inactive;
     private bool isInitDone = false;
     private int activePlayerIndex = 0;
+
+    public Transform LineTransform;
     void Awake()
     {
         players = new List<GameObject>();
@@ -29,21 +31,28 @@ public class PlayerManager : MonoBehaviour
             {
                 if (i > 0)
                 {
-                    players[i].GetComponent<SpriteRenderer>().color = inactive;
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = inactive;
                 }
                 else
                 {
-                    players[i].GetComponent<SpriteRenderer>().color = colors[i];
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = colors[i];
                 }
             }
             colorSave = colors;
             players[1].gameObject.transform.position += Vector3.up * 5;
             isInitDone = true;
             SetPlayerTurn(activePlayerIndex);
+            PlaceCursors();
         }
 
 
     }
+    public void PlaceCursors()
+    {
+        players[0].transform.DOMove(LineTransform.position - LineTransform.transform.up * 3,.5f);
+        players[1].transform.DOMove(LineTransform.position + LineTransform.transform.up * 3,.5f);
+    }
+
     private void SetPlayerTurn(int index)
     {
         for (int i = 0; i < players.Count; i++)
@@ -64,12 +73,12 @@ public class PlayerManager : MonoBehaviour
         {
             if (i == activePlayerIndex)
             {
-                players[i].GetComponent<SpriteRenderer>().color = colors[i];
+                players[i].GetComponentInChildren<SpriteRenderer>().color = colors[i];
             }
 
             else
             {
-                players[i].GetComponent<SpriteRenderer>().color = inactive;
+                players[i].GetComponentInChildren<SpriteRenderer>().color = inactive;
             }
         }
 

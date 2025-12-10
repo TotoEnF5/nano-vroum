@@ -17,6 +17,7 @@ TagManager:
   - Trigger
   - Rocks
   - DashManager
+  - StartGameCheckpoint
   layers:
   - Default
   - TransparentFX

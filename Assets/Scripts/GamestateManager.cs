@@ -27,6 +27,7 @@ public class GamestateManager : MonoBehaviour
     public StartGameScript startGameScript;
     public Chrono chrono;
     public TMP_Text bravo;
+    public PlayerManager PlayerManager;
     
     private Transform _currentCheckpoint;
     private Vector3 _initPlayerPos;
@@ -39,7 +40,7 @@ public class GamestateManager : MonoBehaviour
     public float GlobalTimeIncrement = 0.2f;
 
     public Color Color;
-    
+    private bool mustRestartGame = false;
     private void Awake()
     {
         Shader.SetGlobalColor("_GlobalColor", Color);
@@ -102,7 +103,15 @@ public class GamestateManager : MonoBehaviour
     public void SetCheckpoint(Transform checkpoint)
     {
         _currentCheckpoint = checkpoint;
-        
+        if(checkpoint.tag == "StartGameCheckpoint")
+        {
+            mustRestartGame = true;
+        }
+        else
+        {
+            mustRestartGame = false;
+        }
+
         cameraScript.RegisterState();
         baudroie.RegisterState();
     }
@@ -141,12 +150,12 @@ public class GamestateManager : MonoBehaviour
         {
             return;
         }
-        
         startGameScript.BaudroieTrigger.gameObject.SetActive(false);
         
         _doingGameOverAnimation = true;
         DOTween.timeScale = 1f;
         GlobalTime = 1;
+
         DOTween.To((x) =>
         {
             Color color = image.color;
@@ -195,8 +204,12 @@ public class GamestateManager : MonoBehaviour
                 }
             }
 
+            PlayerManager.PlaceCursors();   
             _doingGameOverAnimation = false;
-
+            if (mustRestartGame)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             DOTween.To((x) =>
             {
                 Color color = image.color;

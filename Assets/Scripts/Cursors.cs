@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(IA_Cursor))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -30,7 +31,7 @@ public class Cursors : MonoBehaviour
     private bool canAct = false;
     PlayerManager pm;
     ParticleSystem ps;
-    SpriteRenderer sr;
+    public SpriteRenderer sr;
     private Camera mainCamera;
 
     public GameObject dashManager;
@@ -39,11 +40,12 @@ public class Cursors : MonoBehaviour
     // Cette variable n'est plus utilisée pour la force simple
     private Vector2 targetDestination;
 
+    public Tween scaleTween;
+    public Tween rotateTween;
     private void Start()
     {
         pm = FindFirstObjectByType<PlayerManager>();
         ps = GetComponent<ParticleSystem>();
-        sr = GetComponent<SpriteRenderer>();
         ps.enableEmission = false;
         mainCamera = Camera.main;
         target = GameObject.FindGameObjectWithTag("Player");
@@ -111,10 +113,14 @@ public class Cursors : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
-    public void PushTargetToCursor()
+    public void PushTargetToCursor(CallbackContext context)
     {
-        if (canAct)
+        if (!context.performed)
         {
+            return;
+        }
+        if (canAct)
+        {   
 
             Vector2 startPos = targetRB.position;
             Vector2 endPos = new Vector2(transform.position.x, transform.position.y);
@@ -144,8 +150,6 @@ public class Cursors : MonoBehaviour
             canAct = false;
             pm.EndTurn();
             dashManager.SetActive(false);
-
-
             // La durée du DOTween est maintenant simplement le targetTravelTime
             DOTween.Sequence()
                 // On utilise targetTravelTime comme durée d'attente
@@ -153,6 +157,19 @@ public class Cursors : MonoBehaviour
                 .AppendCallback(CheckAndReduceVelocity)
                 .Play();
         }
+        if(scaleTween != null)
+        {
+            scaleTween.Kill();
+        }
+
+        if(rotateTween != null)
+        {
+            rotateTween.Kill();
+        }
+        rotateTween = sr.transform.DOPunchRotation(new Vector3(sr.transform.eulerAngles.x, sr.transform.eulerAngles.y, sr.transform.eulerAngles.z + 360), 0.8f, 1);
+        scaleTween = sr.transform.DOPunchScale(Vector3.one * 1.05f, .3f, 1);
+        scaleTween.onKill += ()=> { sr.transform.DOScale(Vector3.one,0.2f); };
+        
     }
 
     private void CheckAndReduceVelocity()
