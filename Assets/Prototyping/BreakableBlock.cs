@@ -23,11 +23,12 @@ public class BreakableBlock : MonoBehaviour
             health--;
             if(health == 0)
             {
+                CameraShake.StartShake(0.3f, 2f);
                 Destroy(gameObject);
-
             }
             else
             {
+                CameraShake.StartShake(0.2f, 1f);
                 spriteRenderer.sprite = sprites[health - 1];
             }
         }
