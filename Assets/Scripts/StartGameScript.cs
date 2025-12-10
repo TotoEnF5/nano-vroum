@@ -30,8 +30,7 @@ public class StartGameScript : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            Camera.main.GetComponent<CameraShake>().duration = 3f;
-            Camera.main.GetComponent<CameraShake>().intensity = 1f;
+            CameraShake.StartShake(3f, 1f);
             collision.gameObject.transform.DOPunchScale(Vector3.one * 1.5f, 1f, 1).SetEase(Ease.OutQuint).onUpdate += () => {
                 collision.gameObject.transform.localScale = Vector3.one;
                 StartCoroutine(corStartCameras());

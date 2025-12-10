@@ -6,7 +6,7 @@ public class CameraShake : MonoBehaviour
     public float intensity = 0f;
     public bool resetLocalPosition;
 
-    public void Update()
+    private void Update()
     {
         if (duration > 0f)
         {
@@ -23,5 +23,18 @@ public class CameraShake : MonoBehaviour
             
             duration = 0f;
         }
+    }
+
+    public static void StartShake(float duration, float intensity)
+    {
+        if (Camera.main == null)
+        {
+            Debug.LogError("CameraShake.StartShake: No main camera defined!");
+            return;
+        }
+
+        CameraShake shake = Camera.main.GetComponent<CameraShake>();
+        shake.duration = duration;
+        shake.intensity = intensity;
     }
 }
