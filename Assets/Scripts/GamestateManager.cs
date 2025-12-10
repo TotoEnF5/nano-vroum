@@ -169,7 +169,7 @@ public class GamestateManager : MonoBehaviour
         Character fish = character.GetComponent<Character>();
         fish.Explode();
         fish.mesh.gameObject.SetActive(false);
-        _doingGameOverAnimation = true;
+        _doingGameOverAnimation = true; 
         DOTween.timeScale = 1f;
         GlobalTime = 1;
 
