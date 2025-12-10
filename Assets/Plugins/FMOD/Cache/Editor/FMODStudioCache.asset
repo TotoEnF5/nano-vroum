@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639008952154582495
+  lastModified: 639008723141282697
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -318,7 +318,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639008952154682815
+  lastModified: 639009578035909960
   FileSizes:
   - Name: Desktop
     Value: 867040
@@ -459,7 +459,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639008952154582495
+  lastModified: 639009578035879420
   FileSizes:
   - Name: Desktop
     Value: 656064
@@ -503,7 +503,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 490254035159929904}
   cacheVersion: 131857
-  cacheTime: 639008952154682815
+  cacheTime: 639009578035909960
   SerializableEventsDict:
   - key: event:/Ambiance
     index: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639008952154582495
+  lastModified: 639009578035869402
   FileSizes:
   - Name: Desktop
     Value: 1500
@@ -640,7 +640,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639008952154682815
+  lastModified: 639008723141337869
   FileSizes:
   - Name: Desktop
     Value: 20288
@@ -983,7 +983,7 @@ MonoBehaviour:
   Path: Fmod_Project/SD_Nanoprojet/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639008952154582495
+  lastModified: 639009578035859334
   FileSizes:
   - Name: Desktop
     Value: 1613984
