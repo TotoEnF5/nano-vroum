@@ -2,6 +2,7 @@ using DG.Tweening;
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -9,9 +10,6 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector]
     public List<GameObject> players;
     public Color[] colors;
-
-    private Color[] colorSave;
-
     public Color inactive;
     private bool isInitDone = false;
     private int activePlayerIndex = 0;
@@ -41,7 +39,6 @@ public class PlayerManager : MonoBehaviour
                 players[i].GetComponent<Cursors>().inactiveColor = inactive;
                 players[i].GetComponent<Cursors>().activeColor = colors[i];
             }
-            colorSave = colors;
             players[1].gameObject.transform.position += Vector3.up * 5;
             isInitDone = true;
             SetPlayerTurn(activePlayerIndex);
@@ -72,6 +69,7 @@ public class PlayerManager : MonoBehaviour
     {
         // Change l'index du joueur actif (0 -> 1, 1 -> 0)
         activePlayerIndex = 1 - activePlayerIndex;
+        RumbleManager.Instance.RumbleCurrent(0.123f, 0.456f, 0.5f);
         for (int i = 0; i < players.Count; i++)
         {
             if (i == activePlayerIndex)
@@ -83,6 +81,7 @@ public class PlayerManager : MonoBehaviour
             {
                 players[i].GetComponentInChildren<SpriteRenderer>().color = inactive;
             }
+
         }
 
         // Applique l'autorisation au nouveau joueur
