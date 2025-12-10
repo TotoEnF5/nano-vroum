@@ -165,7 +165,10 @@ public class GamestateManager : MonoBehaviour
             return;
         }
         startGameScript.BaudroieTrigger.gameObject.SetActive(false);
-        
+
+        Character fish = character.GetComponent<Character>();
+        fish.Explode();
+        fish.mesh.gameObject.SetActive(false);
         _doingGameOverAnimation = true;
         DOTween.timeScale = 1f;
         GlobalTime = 1;
@@ -217,6 +220,7 @@ public class GamestateManager : MonoBehaviour
                     vt.ResetState();
                 }
             }
+            fish.mesh.gameObject.SetActive(true);
 
             PlayerManager.PlaceCursors();   
             _doingGameOverAnimation = false;

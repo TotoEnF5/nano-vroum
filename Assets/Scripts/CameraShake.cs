@@ -6,11 +6,12 @@ public class CameraShake : MonoBehaviour
     public float intensity = 0f;
     public bool resetLocalPosition = true;
 
+    public float globalMultiplier = 0.2f;
     private void Update()
     {
         if (duration > 0f)
         {
-            Vector2 random = Random.insideUnitCircle * intensity;
+            Vector2 random = Random.insideUnitCircle * intensity * globalMultiplier;
             transform.localPosition = new Vector3(random.x, random.y, transform.localPosition.z);
             duration -= Time.deltaTime;
         }

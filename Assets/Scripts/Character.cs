@@ -9,7 +9,8 @@ public class Character : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private Camera mainCamera;
     private ParticleSystem CollidePs;
-
+    public ParticleSystem ExplodePs;
+    public MeshRenderer mesh;
     private void Awake()
     {
         CollidePs = GetComponentInChildren<ParticleSystem>();
@@ -24,16 +25,23 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //_rigidBody.linearVelocity = Vector3.zero;
+        _rigidBody.linearVelocity /= 5;
         CollidePs.Play();
 
         if(collision.gameObject.CompareTag("killer"))
         {
             GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
         }
+        if (collision.gameObject.CompareTag("Baudroie"))
+        {
+            GamestateManager.Instance.SetGamestate(Gamestate.GameOver);
+        }
     }
 
-
+    public void Explode()
+    {
+        ExplodePs.Play();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("LostFriend"))

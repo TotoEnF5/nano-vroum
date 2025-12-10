@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     private bool isInitDone = false;
     private int activePlayerIndex = 0;
 
+    public List<Gamepad> gamepads = new List<Gamepad>();
+
     public Transform LineTransform;
     void Awake()
     {
@@ -65,20 +67,26 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+    public void OnPlayerJoined(PlayerInput playerInput)
+    {
+        Gamepad device = playerInput.GetDevice<Gamepad>();
+        gamepads.Add(device);
+    }
     public void EndTurn()
     {
         // Change l'index du joueur actif (0 -> 1, 1 -> 0)
         activePlayerIndex = 1 - activePlayerIndex;
-        RumbleManager.Instance.RumbleCurrent(0.123f, 0.456f, 0.5f);
         for (int i = 0; i < players.Count; i++)
         {
             if (i == activePlayerIndex)
             {
+                RumbleManager.Instance.Rumble(gamepads[i], 0.053f, 0.126f, 0.1f);
                 players[i].GetComponentInChildren<SpriteRenderer>().color = colors[i];
             }
 
             else
             {
+                RumbleManager.Instance.Rumble(gamepads[i], 0.123f, 0.356f, 0.3f);
                 players[i].GetComponentInChildren<SpriteRenderer>().color = inactive;
             }
 

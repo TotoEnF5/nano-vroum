@@ -22,9 +22,9 @@ public class RumbleManager : MonoBehaviour
     /// <param name="lowFrequency">Fréquence basse de la vibration</param>
     /// <param name="highFrequency">Fréquence hausse de la vibration</param>
     /// <param name="duration">Durée de la vibration</param>
-    public void Rumble(int player, float lowFrequency, float highFrequency, float duration)
+    public void Rumble(Gamepad gamepad, float lowFrequency, float highFrequency, float duration)
     {
-        StartCoroutine(_RumbleCoroutine(player, lowFrequency, highFrequency, duration));
+        StartCoroutine(_RumbleCoroutine(gamepad, lowFrequency, highFrequency, duration));
     }
 
     /// <summary>
@@ -38,11 +38,11 @@ public class RumbleManager : MonoBehaviour
         StartCoroutine(_RumbleCurrentCoroutine(lowFrequency, highFrequency, duration));
     }
 
-    private IEnumerator _RumbleCoroutine(int player, float lowFrequency, float highFrequency, float duration)
+    private IEnumerator _RumbleCoroutine(Gamepad gamepad, float lowFrequency, float highFrequency, float duration)
     {
-        Gamepad.all[player].SetMotorSpeeds(lowFrequency, highFrequency);
+        gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
         yield return new WaitForSeconds(duration);
-        Gamepad.all[player].SetMotorSpeeds(0, 0);
+        gamepad.SetMotorSpeeds(0, 0);
     }
         private IEnumerator _RumbleCurrentCoroutine(float lowFrequency, float highFrequency, float duration)
     {

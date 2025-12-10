@@ -6,7 +6,6 @@ public class AlgaesSlowZone : MonoBehaviour
     public float PlayerLinearDampingIncrease = 2;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Debug.Log(collision);
         if (collision.gameObject.CompareTag("Player"))
         {
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
