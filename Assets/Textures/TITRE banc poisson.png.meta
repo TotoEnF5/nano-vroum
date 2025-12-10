@@ -1,0 +1,2353 @@
+fileFormatVersion: 2
+guid: 3f0f0e0d0cbc9234e8c36ab5e582c73f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1896503850282678561
+    second: TITRE banc poisson_0
+  - first:
+      213: 3379561273268027356
+    second: TITRE banc poisson_1
+  - first:
+      213: 1603057465988404013
+    second: TITRE banc poisson_2
+  - first:
+      213: 8834597249513415790
+    second: TITRE banc poisson_3
+  - first:
+      213: -3793760663987682536
+    second: TITRE banc poisson_4
+  - first:
+      213: 6156535745163628617
+    second: TITRE banc poisson_5
+  - first:
+      213: -637071209725682629
+    second: TITRE banc poisson_6
+  - first:
+      213: 5405400963070662468
+    second: TITRE banc poisson_7
+  - first:
+      213: -1939864571419955301
+    second: TITRE banc poisson_8
+  - first:
+      213: -1408173019897945232
+    second: TITRE banc poisson_9
+  - first:
+      213: -8063403104448217745
+    second: TITRE banc poisson_10
+  - first:
+      213: 7688561660553146782
+    second: TITRE banc poisson_11
+  - first:
+      213: 7070041901194592209
+    second: TITRE banc poisson_12
+  - first:
+      213: -7070988823059012367
+    second: TITRE banc poisson_13
+  - first:
+      213: 98782218384250336
+    second: TITRE banc poisson_14
+  - first:
+      213: -1627079496045869778
+    second: TITRE banc poisson_15
+  - first:
+      213: -3733121286215135645
+    second: TITRE banc poisson_16
+  - first:
+      213: -855989254837038543
+    second: TITRE banc poisson_17
+  - first:
+      213: 2635321713883179926
+    second: TITRE banc poisson_18
+  - first:
+      213: 3449759314317702800
+    second: TITRE banc poisson_19
+  - first:
+      213: 7074852670639663971
+    second: TITRE banc poisson_20
+  - first:
+      213: -7057260599455427972
+    second: TITRE banc poisson_21
+  - first:
+      213: 8289284410462176069
+    second: TITRE banc poisson_22
+  - first:
+      213: 5587484766290732571
+    second: TITRE banc poisson_23
+  - first:
+      213: -8299561111595383087
+    second: TITRE banc poisson_24
+  - first:
+      213: 4823049906084799171
+    second: TITRE banc poisson_25
+  - first:
+      213: -1606109728407071300
+    second: TITRE banc poisson_26
+  - first:
+      213: 4791262911276989558
+    second: TITRE banc poisson_27
+  - first:
+      213: 556329933891991131
+    second: TITRE banc poisson_28
+  - first:
+      213: 790021370582879407
+    second: TITRE banc poisson_29
+  - first:
+      213: -8003593720799791277
+    second: TITRE banc poisson_30
+  - first:
+      213: 4607667297035016794
+    second: TITRE banc poisson_31
+  - first:
+      213: 3496388131268763949
+    second: TITRE banc poisson_32
+  - first:
+      213: 1826458872138270221
+    second: TITRE banc poisson_33
+  - first:
+      213: 6766016881618501834
+    second: TITRE banc poisson_34
+  - first:
+      213: 6043840742192477035
+    second: TITRE banc poisson_35
+  - first:
+      213: 1849276139334330474
+    second: TITRE banc poisson_36
+  - first:
+      213: 4801871275033130314
+    second: TITRE banc poisson_37
+  - first:
+      213: -1326828101300518173
+    second: TITRE banc poisson_38
+  - first:
+      213: 2525020325963954368
+    second: TITRE banc poisson_39
+  - first:
+      213: 6607484208280225041
+    second: TITRE banc poisson_40
+  - first:
+      213: -3976803181194829390
+    second: TITRE banc poisson_41
+  - first:
+      213: -8530158992501623948
+    second: TITRE banc poisson_42
+  - first:
+      213: 2212903217164277323
+    second: TITRE banc poisson_43
+  - first:
+      213: -5985842985678493579
+    second: TITRE banc poisson_44
+  - first:
+      213: -1912618876895884146
+    second: TITRE banc poisson_45
+  - first:
+      213: 4643613041488579434
+    second: TITRE banc poisson_46
+  - first:
+      213: 2176247328305545349
+    second: TITRE banc poisson_47
+  - first:
+      213: 3244648404784758290
+    second: TITRE banc poisson_48
+  - first:
+      213: -55366711118566438
+    second: TITRE banc poisson_49
+  - first:
+      213: -5981828063100101493
+    second: TITRE banc poisson_50
+  - first:
+      213: 4865245364843113575
+    second: TITRE banc poisson_51
+  - first:
+      213: 6016552448701109528
+    second: TITRE banc poisson_52
+  - first:
+      213: -6419348175705361145
+    second: TITRE banc poisson_53
+  - first:
+      213: -7412680763995568100
+    second: TITRE banc poisson_54
+  - first:
+      213: 9221427806725012518
+    second: TITRE banc poisson_55
+  - first:
+      213: -880817529590527249
+    second: TITRE banc poisson_56
+  - first:
+      213: -7214211593036836408
+    second: TITRE banc poisson_57
+  - first:
+      213: -1917088620986667534
+    second: TITRE banc poisson_58
+  - first:
+      213: -681881895260154531
+    second: TITRE banc poisson_59
+  - first:
+      213: -7050141514256909182
+    second: TITRE banc poisson_60
+  - first:
+      213: -4344855646433603945
+    second: TITRE banc poisson_61
+  - first:
+      213: -4620693331950848420
+    second: TITRE banc poisson_62
+  - first:
+      213: -8166740996219333310
+    second: TITRE banc poisson_63
+  - first:
+      213: -7283710447494704737
+    second: TITRE banc poisson_64
+  - first:
+      213: 2926128671317495702
+    second: TITRE banc poisson_65
+  - first:
+      213: -1301977665242333015
+    second: TITRE banc poisson_66
+  - first:
+      213: -695260218735474446
+    second: TITRE banc poisson_67
+  - first:
+      213: -7314920349670747944
+    second: TITRE banc poisson_68
+  - first:
+      213: -8430528799348107331
+    second: TITRE banc poisson_69
+  - first:
+      213: -7366047375891698099
+    second: TITRE banc poisson_70
+  - first:
+      213: 325308108847913701
+    second: TITRE banc poisson_71
+  - first:
+      213: 3575137215670222198
+    second: TITRE banc poisson_72
+  - first:
+      213: -1204916065386423377
+    second: TITRE banc poisson_73
+  - first:
+      213: 4248560269535337344
+    second: TITRE banc poisson_74
+  - first:
+      213: 6617147211083236984
+    second: TITRE banc poisson_75
+  - first:
+      213: -38756881929538721
+    second: TITRE banc poisson_76
+  - first:
+      213: 7765922885562453178
+    second: TITRE banc poisson_77
+  - first:
+      213: 3210365072400898697
+    second: TITRE banc poisson_78
+  - first:
+      213: 461834491846643664
+    second: TITRE banc poisson_79
+  - first:
+      213: 3445267041367860355
+    second: TITRE banc poisson_80
+  - first:
+      213: 986641881525910475
+    second: TITRE banc poisson_81
+  - first:
+      213: -5992653955727049258
+    second: TITRE banc poisson_82
+  - first:
+      213: -6439074008576985261
+    second: TITRE banc poisson_83
+  - first:
+      213: 2610449594105478070
+    second: TITRE banc poisson_84
+  - first:
+      213: -5063472490826287915
+    second: TITRE banc poisson_85
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TITRE banc poisson_0
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 587
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd68db8dbc34ea5e0800000000000000
+      internalID: -1896503850282678561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 605
+        width: 69
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfbec5821d96ee20800000000000000
+      internalID: 3379561273268027356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 620
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23d6ce95443f3610800000000000000
+      internalID: 1603057465988404013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_3
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 603
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64e3e6046bca9a70800000000000000
+      internalID: 8834597249513415790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_4
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 329
+        width: 636
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8130a2cb6cad95bc0800000000000000
+      internalID: -3793760663987682536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_5
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 548
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940197934a8607550800000000000000
+      internalID: 6156535745163628617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_6
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 593
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c1caf2c1ba827f0800000000000000
+      internalID: -637071209725682629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_7
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 565
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44791607987d30b40800000000000000
+      internalID: 5405400963070662468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_8
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 537
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fe52c33773415e0800000000000000
+      internalID: -1939864571419955301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_9
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 527
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073a1b6691a257ce0800000000000000
+      internalID: -1408173019897945232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_10
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 498
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6df4962999091090800000000000000
+      internalID: -8063403104448217745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 527
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9135f2381243ba60800000000000000
+      internalID: 7688561660553146782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_12
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 526
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfb4d386a5dd1260800000000000000
+      internalID: 7070041901194592209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_13
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 476
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f46fce012dcedd90800000000000000
+      internalID: -7070988823059012367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 508
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e51bec77e1fe5100800000000000000
+      internalID: 98782218384250336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 483
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e254dd8a1d37b69e0800000000000000
+      internalID: -1627079496045869778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_16
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 495
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e82b718f9413cc0800000000000000
+      internalID: -3733121286215135645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_17
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 466
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13213e5de4aee14f0800000000000000
+      internalID: -855989254837038543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_18
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 446
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b61e0e22b829420800000000000000
+      internalID: 2635321713883179926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_19
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 457
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096708a91d100ef20800000000000000
+      internalID: 3449759314317702800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_20
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 407
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b63bf050dee2260800000000000000
+      internalID: 7074852670639663971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_21
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 463
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72591230e29f0e90800000000000000
+      internalID: -7057260599455427972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 460
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54308c7b044790370800000000000000
+      internalID: 8289284410462176069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_23
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 399
+        width: 90
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b166aaa8acbba8d40800000000000000
+      internalID: 5587484766290732571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_24
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 409
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d606b7542902dc80800000000000000
+      internalID: -8299561111595383087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_25
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 362
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c26a22065aeee240800000000000000
+      internalID: 4823049906084799171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 406
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb55ff726b3f5b9e0800000000000000
+      internalID: -1606109728407071300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_27
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 399
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c3b2c8b3cfd7240800000000000000
+      internalID: 4791262911276989558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_28
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 411
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b567c87902b78b700800000000000000
+      internalID: 556329933891991131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_29
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 343
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac4f863048b6fa00800000000000000
+      internalID: 790021370582879407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_30
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 346
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3577e217ae58de090800000000000000
+      internalID: -8003593720799791277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_31
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 346
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ad4f28ef8b1ff30800000000000000
+      internalID: 4607667297035016794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_32
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 289
+        width: 205
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21aa211b7aa58030800000000000000
+      internalID: 3496388131268763949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_33
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 372
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0689aecaa2e85910800000000000000
+      internalID: 1826458872138270221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_34
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 309
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0ca258188b5ed50800000000000000
+      internalID: 6766016881618501834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_35
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 279
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b637a65222900e350800000000000000
+      internalID: 6043840742192477035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_36
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 323
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68e0a0d9d2f9a910800000000000000
+      internalID: 1849276139334330474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_37
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 289
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a457085bb7ca3a240800000000000000
+      internalID: 4801871275033130314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_38
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 326
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e20af72fd8269de0800000000000000
+      internalID: -1326828101300518173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_39
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 318
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8f8bbbb9caa0320800000000000000
+      internalID: 2525020325963954368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_40
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 316
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115cb8521ef72bb50800000000000000
+      internalID: 6607484208280225041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_41
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 306
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b12d33a39e8fc8c0800000000000000
+      internalID: -3976803181194829390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_42
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 312
+        width: 85
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473365e4799ce9980800000000000000
+      internalID: -8530158992501623948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_43
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 235
+        width: 237
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46556560cfc5be10800000000000000
+      internalID: 2212903217164277323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_44
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 218
+        width: 223
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578ae55d4830eeca0800000000000000
+      internalID: -5985842985678493579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_45
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 289
+        width: 94
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c0ae3d3430575e0800000000000000
+      internalID: -1912618876895884146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_46
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 260
+        width: 120
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b4c44557d617040800000000000000
+      internalID: 4643613041488579434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_47
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 323
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5808b033a65933e10800000000000000
+      internalID: 2176247328305545349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_48
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 290
+        width: 43
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ebb34888e470d20800000000000000
+      internalID: 3244648404784758290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_49
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 266
+        width: 92
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb6563054c4b3ff0800000000000000
+      internalID: -55366711118566438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_50
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 301
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c9477d1174cfca0800000000000000
+      internalID: -5981828063100101493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_51
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 274
+        width: 102
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ce694d1e2d48340800000000000000
+      internalID: 4865245364843113575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_52
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 289
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815165533961f7350800000000000000
+      internalID: 6016552448701109528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_53
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 285
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705b78968d4e9e6a0800000000000000
+      internalID: -6419348175705361145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_54
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 255
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c184ca48e1ed02990800000000000000
+      internalID: -7412680763995568100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_55
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 221
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cf0c5abb719ff70800000000000000
+      internalID: 9221427806725012518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_56
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 267
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feac1d4af15b6c3f0800000000000000
+      internalID: -880817529590527249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_57
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 246
+        width: 66
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1d88657c8f1eb90800000000000000
+      internalID: -7214211593036836408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_58
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 240
+        width: 137
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd652f6e022565e0800000000000000
+      internalID: -1917088620986667534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_59
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 270
+        width: 55
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d559f3e67087986f0800000000000000
+      internalID: -681881895260154531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_60
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 277
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c7b7265add82e90800000000000000
+      internalID: -7050141514256909182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_61
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 242
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e89f14fc8f3b3c0800000000000000
+      internalID: -4344855646433603945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_62
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 224
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56bd0565efffdfb0800000000000000
+      internalID: -4620693331950848420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_63
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 191
+        width: 124
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2451abb4558e9ae80800000000000000
+      internalID: -8166740996219333310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_64
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 185
+        width: 127
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91d64250ff0bea90800000000000000
+      internalID: -7283710447494704737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_65
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 232
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f07f4f582bb9820800000000000000
+      internalID: 2926128671317495702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_66
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 198
+        width: 185
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a00dbd26327eede0800000000000000
+      internalID: -1301977665242333015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_67
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 209
+        width: 56
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8cfc3c380f956f0800000000000000
+      internalID: -695260218735474446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_68
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 227
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d05995b2be2c7a90800000000000000
+      internalID: -7314920349670747944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_69
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 203
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7d72e49beb00b80800000000000000
+      internalID: -8430528799348107331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_70
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 173
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ee64940fa86c990800000000000000
+      internalID: -7366047375891698099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_71
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 205
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea1f6e500ab38400800000000000000
+      internalID: 325308108847913701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_72
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 175
+        width: 51
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d7d431b507d9130800000000000000
+      internalID: 3575137215670222198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_73
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 170
+        width: 156
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab1b72f837474fe0800000000000000
+      internalID: -1204916065386423377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_74
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 181
+        width: 91
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bdd782e0be5fa30800000000000000
+      internalID: 4248560269535337344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_75
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 183
+        width: 95
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876451f4454d4db50800000000000000
+      internalID: 6617147211083236984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_76
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 144
+        width: 95
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53fcfb32de467ff0800000000000000
+      internalID: -38756881929538721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_77
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 163
+        width: 58
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcc60308b916cb60800000000000000
+      internalID: 7765922885562453178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_78
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 131
+        width: 132
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ad6cb26028d8c20800000000000000
+      internalID: 3210365072400898697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_79
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 178
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfca8ff504c86600800000000000000
+      internalID: 461834491846643664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_80
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 184
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384a71dce1c00df20800000000000000
+      internalID: 3445267041367860355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_81
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 143
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbffd4509141bd00800000000000000
+      internalID: 986641881525910475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_82
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 143
+        width: 79
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddbc0b4af0d5dca0800000000000000
+      internalID: -5992653955727049258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_83
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 149
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357715c0e40d3a6a0800000000000000
+      internalID: -6439074008576985261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_84
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 136
+        width: 85
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb38b8331e2a3420800000000000000
+      internalID: 2610449594105478070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TITRE banc poisson_85
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 114
+        width: 71
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d43656d89eeab9b0800000000000000
+      internalID: -5063472490826287915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TITRE banc poisson_0: -1896503850282678561
+      TITRE banc poisson_1: 3379561273268027356
+      TITRE banc poisson_10: -8063403104448217745
+      TITRE banc poisson_11: 7688561660553146782
+      TITRE banc poisson_12: 7070041901194592209
+      TITRE banc poisson_13: -7070988823059012367
+      TITRE banc poisson_14: 98782218384250336
+      TITRE banc poisson_15: -1627079496045869778
+      TITRE banc poisson_16: -3733121286215135645
+      TITRE banc poisson_17: -855989254837038543
+      TITRE banc poisson_18: 2635321713883179926
+      TITRE banc poisson_19: 3449759314317702800
+      TITRE banc poisson_2: 1603057465988404013
+      TITRE banc poisson_20: 7074852670639663971
+      TITRE banc poisson_21: -7057260599455427972
+      TITRE banc poisson_22: 8289284410462176069
+      TITRE banc poisson_23: 5587484766290732571
+      TITRE banc poisson_24: -8299561111595383087
+      TITRE banc poisson_25: 4823049906084799171
+      TITRE banc poisson_26: -1606109728407071300
+      TITRE banc poisson_27: 4791262911276989558
+      TITRE banc poisson_28: 556329933891991131
+      TITRE banc poisson_29: 790021370582879407
+      TITRE banc poisson_3: 8834597249513415790
+      TITRE banc poisson_30: -8003593720799791277
+      TITRE banc poisson_31: 4607667297035016794
+      TITRE banc poisson_32: 3496388131268763949
+      TITRE banc poisson_33: 1826458872138270221
+      TITRE banc poisson_34: 6766016881618501834
+      TITRE banc poisson_35: 6043840742192477035
+      TITRE banc poisson_36: 1849276139334330474
+      TITRE banc poisson_37: 4801871275033130314
+      TITRE banc poisson_38: -1326828101300518173
+      TITRE banc poisson_39: 2525020325963954368
+      TITRE banc poisson_4: -3793760663987682536
+      TITRE banc poisson_40: 6607484208280225041
+      TITRE banc poisson_41: -3976803181194829390
+      TITRE banc poisson_42: -8530158992501623948
+      TITRE banc poisson_43: 2212903217164277323
+      TITRE banc poisson_44: -5985842985678493579
+      TITRE banc poisson_45: -1912618876895884146
+      TITRE banc poisson_46: 4643613041488579434
+      TITRE banc poisson_47: 2176247328305545349
+      TITRE banc poisson_48: 3244648404784758290
+      TITRE banc poisson_49: -55366711118566438
+      TITRE banc poisson_5: 6156535745163628617
+      TITRE banc poisson_50: -5981828063100101493
+      TITRE banc poisson_51: 4865245364843113575
+      TITRE banc poisson_52: 6016552448701109528
+      TITRE banc poisson_53: -6419348175705361145
+      TITRE banc poisson_54: -7412680763995568100
+      TITRE banc poisson_55: 9221427806725012518
+      TITRE banc poisson_56: -880817529590527249
+      TITRE banc poisson_57: -7214211593036836408
+      TITRE banc poisson_58: -1917088620986667534
+      TITRE banc poisson_59: -681881895260154531
+      TITRE banc poisson_6: -637071209725682629
+      TITRE banc poisson_60: -7050141514256909182
+      TITRE banc poisson_61: -4344855646433603945
+      TITRE banc poisson_62: -4620693331950848420
+      TITRE banc poisson_63: -8166740996219333310
+      TITRE banc poisson_64: -7283710447494704737
+      TITRE banc poisson_65: 2926128671317495702
+      TITRE banc poisson_66: -1301977665242333015
+      TITRE banc poisson_67: -695260218735474446
+      TITRE banc poisson_68: -7314920349670747944
+      TITRE banc poisson_69: -8430528799348107331
+      TITRE banc poisson_7: 5405400963070662468
+      TITRE banc poisson_70: -7366047375891698099
+      TITRE banc poisson_71: 325308108847913701
+      TITRE banc poisson_72: 3575137215670222198
+      TITRE banc poisson_73: -1204916065386423377
+      TITRE banc poisson_74: 4248560269535337344
+      TITRE banc poisson_75: 6617147211083236984
+      TITRE banc poisson_76: -38756881929538721
+      TITRE banc poisson_77: 7765922885562453178
+      TITRE banc poisson_78: 3210365072400898697
+      TITRE banc poisson_79: 461834491846643664
+      TITRE banc poisson_8: -1939864571419955301
+      TITRE banc poisson_80: 3445267041367860355
+      TITRE banc poisson_81: 986641881525910475
+      TITRE banc poisson_82: -5992653955727049258
+      TITRE banc poisson_83: -6439074008576985261
+      TITRE banc poisson_84: 2610449594105478070
+      TITRE banc poisson_85: -5063472490826287915
+      TITRE banc poisson_9: -1408173019897945232
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
