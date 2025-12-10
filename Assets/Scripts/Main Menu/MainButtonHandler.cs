@@ -6,6 +6,8 @@ using FMODUnity;
 
 public class MainButtonHandler : MonoBehaviour
 {
+    public LoadingScript loadingScript;
+    
     public Button play;
     public Button settings;
     public Button credits;
@@ -21,7 +23,8 @@ public class MainButtonHandler : MonoBehaviour
 
     private void OnPlay()
     {
-        SceneManager.LoadScene("Level");
+        loadingScript.LoadScene("Level");
+        // SceneManager.LoadScene("Level");
     }
     
     private void OnSettings()
