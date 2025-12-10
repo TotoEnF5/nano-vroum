@@ -7,11 +7,14 @@ using FMODUnity;
 public class MainButtonHandler : MonoBehaviour
 {
     public LoadingScript loadingScript;
+
+    public GameObject creditsLayer;
     
     public Button play;
     public Button settings;
     public Button credits;
     public Button quit;
+    public Button creditsBack;
 
     private void Awake()
     {
@@ -19,6 +22,7 @@ public class MainButtonHandler : MonoBehaviour
         settings.onClick.AddListener(OnSettings);
         credits.onClick.AddListener(OnCredits);
         quit.onClick.AddListener(OnQuit);
+        creditsBack.onClick.AddListener(OnCreditsBack);
     }
 
     private void OnPlay()
@@ -34,12 +38,17 @@ public class MainButtonHandler : MonoBehaviour
     
     private void OnCredits()
     {
-        throw new NotImplementedException();
+        creditsLayer.SetActive(true);
     }
     
     private void OnQuit()
     {
         Application.Quit();
+    }
+
+    private void OnCreditsBack()
+    {
+        creditsLayer.SetActive(false);
     }
 
 }
